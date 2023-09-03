@@ -11,7 +11,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _counter = 0;
-
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -20,8 +19,23 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double statusBarHeight = MediaQuery.of(context).padding.top;
+
     return Scaffold(
       appBar: CustomAppBar(title: 'MFA二次验证码', key: UniqueKey()),
+      drawer: Drawer(
+          width: 250,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.zero,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  padding: EdgeInsets.only(top: statusBarHeight, left: 10),
+                  child: const Text('123'))
+            ],
+          )),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
