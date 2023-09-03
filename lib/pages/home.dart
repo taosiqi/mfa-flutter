@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
       appBar: CustomAppBar(title: 'MFA二次验证码', key: UniqueKey()),
       drawer: Drawer(
           width: 250,
+          backgroundColor: Colors.white,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.zero,
           ),
@@ -32,8 +33,8 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                  padding: EdgeInsets.only(top: statusBarHeight, left: 10),
-                  child: const Text('123'))
+                  padding: EdgeInsets.only(top: statusBarHeight, left: 22),
+                  child: const Text('666'))
             ],
           )),
       body: Center(
