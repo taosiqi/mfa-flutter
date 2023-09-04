@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mfa/pages/home.dart';
-import 'package:mfa/pages/login.dart';
+import 'package:mfa/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,6 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  final ThemeMode themeMode = ThemeMode.system;
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +27,8 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.light, // 主题模式
-      routes: {
-        "login": (context) => const LoginPage(),
-        "/": (context) => const HomePage(), //注册首页路由
-      },
+      themeMode: themeMode, // 主题模式
+      routes: routes,
     );
   }
 }
