@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "login");
+                  Navigator.pushNamed(context, "entry");
                 },
                 style: ElevatedButton.styleFrom(
                   shape: const RoundedRectangleBorder(

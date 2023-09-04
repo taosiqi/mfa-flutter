@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/appBar.dart';
+import 'package:mfa/widgets/basic/AppBar.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -13,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(title: '登陆'),
+      appBar: BasicAppBar(title: '登陆'),
       body: Center(
         child: Text('Login'),
       ),

@@ -10,6 +10,6 @@ class AfterPage extends StatefulWidget {
 class _AfterPageState extends State<AfterPage> {
   @override
   Widget build(BuildContext context) {
-    return const Text('After');
+    return const Text('AfterPage');
   }
 }

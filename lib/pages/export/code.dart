@@ -10,6 +10,6 @@ class CodePage extends StatefulWidget {
 class _CodePageState extends State<CodePage> {
   @override
   Widget build(BuildContext context) {
-    return const Text('Code');
+    return const Text('CodePage');
   }
 }
