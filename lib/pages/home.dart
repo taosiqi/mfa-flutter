@@ -47,22 +47,9 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                  padding: EdgeInsets.only(top: statusBarHeight, left: 22),
-                  child: Builder(
-                    // 用Builder把context暴露出来，以便Scaffold.of(context)可以使用
-                    // context会向上查找最近的Scaffold widget
-                    builder: (context) => IconButton(
-                      onPressed: () {
-                        // 这是一种查找方法
-                        //最优的是什么
-                        // Container? container =
-                        //     context.findAncestorWidgetOfExactType<Container>();
-                        // print(container?.padding);
-                        Scaffold.of(context).closeDrawer();
-                      },
-                      icon: const Icon(Icons.menu_outlined),
-                    ),
-                  )),
+                padding: EdgeInsets.only(top: statusBarHeight, left: 22),
+                child: buildContainer(),
+              ),
             ],
           )),
       body: Center(
@@ -94,6 +81,17 @@ class _HomePageState extends State<HomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
+      ),
+    );
+  }
+
+  Builder buildContainer() {
+    return Builder(
+      builder: (context) => IconButton(
+        onPressed: () {
+          Scaffold.of(context).closeDrawer();
+        },
+        icon: const Icon(Icons.menu_outlined),
       ),
     );
   }
