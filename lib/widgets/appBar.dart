@@ -3,32 +3,20 @@ import 'package:flutter/services.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-
-  const CustomAppBar({required Key key, required this.title}) : super(key: key);
+  final List<Widget>? actions;
+  const CustomAppBar({Key? key, required this.title, this.actions = const []})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       systemOverlayStyle: SystemUiOverlayStyle.dark,
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.settings),
-        ),
-      ],
-      leading: Builder(
-        builder: (context) => IconButton(
-          onPressed: () {
-            Scaffold.of(context).openDrawer();
-          },
-          icon: const Icon(Icons.menu_outlined),
-        ),
-      ),
+      actions: actions,
       title: Text(
         title,
         style: const TextStyle(fontSize: 22),
       ),
-      centerTitle: false,
+      centerTitle: true,
     );
   }
 

@@ -12,9 +12,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(title: '登陆', key: UniqueKey()),
-      body: const Center(
+    return const Scaffold(
+      appBar: CustomAppBar(title: '登陆'),
+      body: Center(
         child: Text('Login'),
       ),
     );

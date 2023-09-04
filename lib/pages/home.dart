@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../widgets/appBar.dart';
+import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,7 +21,22 @@ class _HomePageState extends State<HomePage> {
     double statusBarHeight = MediaQuery.of(context).padding.top;
 
     return Scaffold(
-      appBar: CustomAppBar(title: 'MFA二次验证码', key: UniqueKey()),
+      appBar: AppBar(
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+        leading: Builder(
+          builder: (context) => IconButton(
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+            icon: const Icon(Icons.menu_outlined),
+          ),
+        ),
+        title: const Text(
+          'MFA二次验证码',
+          style: TextStyle(fontSize: 22),
+        ),
+        centerTitle: false,
+      ),
       drawer: Drawer(
           width: 250,
           backgroundColor: Colors.white,
