@@ -83,6 +83,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.7"
+  launcher_name:
+    dependency: "direct dev"
+    description:
+      name: launcher_name
+      sha256: "5fc9a8b8de9e255d5f21effc33632b5620771c9b2310d459a7710b725353b305"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   lints:
     dependency: transitive
     description:
@@ -184,5 +192,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  yaml:
+    dependency: transitive
+    description:
+      name: yaml
+      sha256: "75769501ea3489fca56601ff33454fe45507ea3bfb014161abc3b43ae25989d5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.2"
 sdks:
   dart: ">=3.0.6 <4.0.0"
+  flutter: ">=1.17.0"
