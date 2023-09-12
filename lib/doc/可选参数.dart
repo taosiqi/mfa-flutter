@@ -23,8 +23,3 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
-
-// 可选参数需要指定key
-
-// LoginPage(title: '登陆'),
-// const LoginPage({super.key, this.title = ''});
