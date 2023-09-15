@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -67,8 +68,12 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "entry");
+                onPressed: () async {
+                  PackageInfo packageInfo = await PackageInfo.fromPlatform();
+                  print(packageInfo.version);
+                  print(packageInfo.buildNumber);
+                  print(packageInfo.packageName);
+                  // Navigator.pushNamed(context, "login");
                 },
                 style: ElevatedButton.styleFrom(
                   shape: const RoundedRectangleBorder(

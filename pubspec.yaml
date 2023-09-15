@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
@@ -35,12 +35,13 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  package_info_plus: ^4.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  launcher_name: ^1.0.2
+  package_rename: ^1.5.0
   flutter_native_splash: ^2.3.2
   flutter_launcher_icons: ^0.13.1
 
@@ -50,14 +51,21 @@ flutter_launcher_icons:
   image_path: "assets/images/icon.png"
   min_sdk_android: 21
 
-launcher_name:
-  default: "MFA"
-
 flutter_native_splash:
   color: "#ffffff"
   color_dark: "#000000"
   image: "assets/images/splash.png"
   ios_content_mode: "contain"
+
+package_rename_config:
+  android:
+    app_name: MFA
+    package_name: com.taosiqi.mfa
+    override_old_package: com.example.mfa
+  ios:
+    app_name: MFA
+    bundle_name: mfa
+    package_name: com.taosiqi.mfa
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

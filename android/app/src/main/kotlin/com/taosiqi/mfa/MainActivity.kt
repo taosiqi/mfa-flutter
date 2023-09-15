@@ -1,4 +1,4 @@
-package com.example.mfa
+package com.taosiqi.mfa
 
 import io.flutter.embedding.android.FlutterActivity
 
