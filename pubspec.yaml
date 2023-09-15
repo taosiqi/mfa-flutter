@@ -60,12 +60,12 @@ flutter_native_splash:
 package_rename_config:
   android:
     app_name: MFA
-    package_name: com.taosiqi.mfa
-    override_old_package: com.example.mfa
+    package_name: com.taosiqi.mfaapp
+    override_old_package: com.taosiqi.mfa
   ios:
     app_name: MFA
     bundle_name: mfa
-    package_name: com.taosiqi.mfa
+    package_name: com.taosiqi.mfaapp
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
