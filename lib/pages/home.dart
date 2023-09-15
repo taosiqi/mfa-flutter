@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -70,9 +71,10 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(
                 onPressed: () async {
                   PackageInfo packageInfo = await PackageInfo.fromPlatform();
-                  print(packageInfo.version);
-                  print(packageInfo.buildNumber);
-                  print(packageInfo.packageName);
+                  debugPrint(packageInfo.version);
+                  debugPrint(packageInfo.buildNumber);
+                  debugPrint(packageInfo.packageName);
+                  debugPrint('kReleaseMode: $kReleaseMode');
                   // Navigator.pushNamed(context, "login");
                 },
                 style: ElevatedButton.styleFrom(
