@@ -4,7 +4,7 @@ import 'package:mfa/routes/routes.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding); // 保持屏幕海报
   runApp(const MyApp());
 }
 

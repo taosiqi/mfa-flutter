@@ -1,10 +1,6 @@
-import 'dart:async';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,7 +20,8 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     Future.delayed(const Duration(milliseconds: 3000), () {
-      FlutterNativeSplash.remove();
+      debugPrint('init over');
+      FlutterNativeSplash.remove(); //关闭开屏海报
     });
   }
 
@@ -70,12 +67,12 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             ElevatedButton(
                 onPressed: () async {
-                  PackageInfo packageInfo = await PackageInfo.fromPlatform();
-                  debugPrint(packageInfo.version);
-                  debugPrint(packageInfo.buildNumber);
-                  debugPrint(packageInfo.packageName);
-                  debugPrint('kReleaseMode: $kReleaseMode');
-                  // Navigator.pushNamed(context, "login");
+                  // PackageInfo packageInfo = await PackageInfo.fromPlatform();
+                  // debugPrint(packageInfo.version);
+                  // debugPrint(packageInfo.buildNumber);
+                  // debugPrint(packageInfo.packageName);
+                  // debugPrint('kReleaseMode: $kReleaseMode');
+                  Navigator.pushNamed(context, "login");
                 },
                 style: ElevatedButton.styleFrom(
                   shape: const RoundedRectangleBorder(
@@ -86,9 +83,10 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text('$_counter',
-                  textScaleFactor: 2.0,
+                  // textScaleFactor: 1.5,
                   style: const TextStyle(
                     fontSize: 50,
+                    color: Colors.blue,
                   )),
             ),
           ],
