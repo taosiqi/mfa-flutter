@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:mfa/widgets/basic/Icon.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -106,7 +107,7 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           Scaffold.of(context).closeDrawer();
         },
-        icon: const Icon(Icons.menu_outlined),
+        icon: const Icon(AntdIcons.calendar),
       ),
     );
   }

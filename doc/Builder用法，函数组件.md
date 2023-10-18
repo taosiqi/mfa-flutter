@@ -1,3 +1,4 @@
+```dart
 import 'package:flutter/material.dart';
 
 /// 用Builder把context暴露出来，以便Scaffold.of(context)可以使用
@@ -17,3 +18,5 @@ Builder buildContainer(String name) {
     ),
   );
 }
+
+```
