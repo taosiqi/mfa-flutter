@@ -90,6 +90,17 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.blue,
                   )),
             ),
+            Image.asset(
+              'assets/images/tv.png',
+              height: 100,
+              width: 100,
+              fit: BoxFit.contain,
+            ),
+            Image.network(
+              'https://static-1253419794.cos.ap-nanjing.myqcloud.com/img/14883291_0_final.png',
+              width: 50,
+              height: 50,
+            ),
           ],
         ),
       ),
