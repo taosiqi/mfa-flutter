@@ -1,20 +1,33 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
-class ColorConstants {
-  static const themeColor = Color(0xfff5a623);
-  static Map<int, Color> swatchColor = {
-    50: themeColor.withOpacity(0.1),
-    100: themeColor.withOpacity(0.2),
-    200: themeColor.withOpacity(0.3),
-    300: themeColor.withOpacity(0.4),
-    400: themeColor.withOpacity(0.5),
-    500: themeColor.withOpacity(0.6),
-    600: themeColor.withOpacity(0.7),
-    700: themeColor.withOpacity(0.8),
-    800: themeColor.withOpacity(0.9),
-    900: themeColor.withOpacity(1),
-  };
-  static const primaryColor = Color(0xff203152);
-  static const greyColor = Color(0xffaeaeae);
-  static const greyColor2 = Color(0xffE8E8E8);
+class AppThemes {
+  static const primary = Colors.blue;
+  static const white = Colors.white;
+  static const black = Colors.black;
+
+  static final ThemeData lightTheme = ThemeData(
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: primary,
+      background: white,
+      onSurface: black,
+      surface: white,
+      shadow: primary,
+      primaryContainer: primary,
+      onPrimaryContainer: Colors.white,
+    ),
+    useMaterial3: true,
+  );
+
+  static final ThemeData darkTheme = ThemeData(
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: black,
+      background: black,
+      onSurface: white,
+      surface: black,
+      shadow: white,
+      primaryContainer: primary,
+      onPrimaryContainer: white,
+    ),
+    useMaterial3: true,
+  );
 }

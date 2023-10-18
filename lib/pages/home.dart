@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:mfa/widgets/basic/Icon.dart';
 
+import '../widgets/basic/Button.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -49,7 +51,7 @@ class _HomePageState extends State<HomePage> {
       ),
       drawer: Drawer(
           width: 250,
-          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.zero,
           ),
@@ -66,28 +68,19 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-                onPressed: () async {
-                  // PackageInfo packageInfo = await PackageInfo.fromPlatform();
-                  // debugPrint(packageInfo.version);
-                  // debugPrint(packageInfo.buildNumber);
-                  // debugPrint(packageInfo.packageName);
-                  // debugPrint('kReleaseMode: $kReleaseMode');
-                  Navigator.pushNamed(context, "login");
-                },
-                style: ElevatedButton.styleFrom(
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(18)),
-                  ),
-                ),
-                child: const Text('Login')),
+            Button(
+              onPressed: () {
+                Navigator.pushNamed(context, "login");
+              },
+              text: 'LoginLoginLoginLoginLogin',
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text('$_counter',
                   // textScaleFactor: 1.5,
                   style: const TextStyle(
                     fontSize: 50,
-                    color: Colors.blue,
+                    // color: Colors.blue,
                   )),
             ),
             Image.asset(
