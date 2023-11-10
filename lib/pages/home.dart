@@ -5,6 +5,16 @@ import 'package:mfa/widgets/basic/Icon.dart';
 
 import '../widgets/basic/Button.dart';
 
+TextStyle textStyle = const TextStyle(
+  fontSize: 30, //字体大小
+  color: Colors.deepOrange, //字体颜色
+  decoration: TextDecoration.lineThrough, //设置删除线
+  decorationColor: Colors.green, //删除线颜色为绿色
+  decorationStyle: TextDecorationStyle.wavy, //删除线为波浪线
+  fontWeight: FontWeight.bold, //加粗
+  fontStyle: FontStyle.italic, //斜体
+);
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -45,7 +55,6 @@ class _HomePageState extends State<HomePage> {
         ),
         title: const Text(
           'MFA二次验证码',
-          style: TextStyle(fontSize: 22),
         ),
         centerTitle: false,
       ),
@@ -68,6 +77,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(
+              'MFA二次验证码',
+              style: textStyle,
+            ),
             Button(
               onPressed: () {
                 Navigator.pushNamed(context, "login");
