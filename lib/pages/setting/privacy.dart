@@ -10,6 +10,6 @@ class PrivacyPage extends StatefulWidget {
 class _PrivacyPageState extends State<PrivacyPage> {
   @override
   Widget build(BuildContext context) {
-    return const Text('Code');
+    return const Text('PrivacyPage');
   }
 }

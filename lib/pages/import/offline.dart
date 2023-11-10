@@ -10,6 +10,6 @@ class OfflinePage extends StatefulWidget {
 class _OfflinePageState extends State<OfflinePage> {
   @override
   Widget build(BuildContext context) {
-    return const Text('Code');
+    return const Text('OfflinePage');
   }
 }
