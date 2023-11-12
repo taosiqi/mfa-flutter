@@ -6,6 +6,7 @@ import 'package:mfa/widgets/basic/FadeRoute.dart';
 import 'package:mfa/widgets/basic/Icon.dart';
 
 import '../widgets/basic/Button.dart';
+import '../widgets/basic/CButton.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,8 +16,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<String> a = ['1', '2'];
+
   int _counter = 0;
   void _incrementCounter() {
+    a.join(',');
     setState(() {
       _counter++;
     });
@@ -24,6 +28,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
+    super.initState();
     Future.delayed(const Duration(milliseconds: 3000), () {
       debugPrint('init over');
       FlutterNativeSplash.remove(); //关闭开屏海报
@@ -70,6 +75,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            CustomElevatedButton.custom(
+              onPressed: () {},
+              child: const Text('Button'),
+            ),
             Button(
               onPressed: () {
                 // Navigator.pushNamed(context, "login");
