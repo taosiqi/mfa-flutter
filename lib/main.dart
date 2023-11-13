@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MFA二次验证码',
+      debugShowCheckedModeBanner: false,
       darkTheme: AppThemes.darkTheme,
       theme: AppThemes.lightTheme,
       themeMode: ThemeMode.system, // 主题模式
