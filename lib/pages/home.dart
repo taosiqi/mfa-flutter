@@ -6,7 +6,6 @@ import 'package:mfa/widgets/basic/FadeRoute.dart';
 import 'package:mfa/widgets/basic/Icon.dart';
 
 import '../widgets/basic/Button.dart';
-import '../widgets/basic/CButton.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,11 +15,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<String> a = ['1', '2'];
-
   int _counter = 0;
+
   void _incrementCounter() {
-    a.join(',');
     setState(() {
       _counter++;
     });
@@ -38,6 +35,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     double statusBarHeight = MediaQuery.of(context).padding.top;
+    final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
       appBar: AppBar(
@@ -75,38 +73,18 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            CustomElevatedButton.custom(
-              onPressed: () {},
-              child: const Text('Button'),
+            Text(
+              '$_counter',
+              style: TextStyle(fontSize: 40, color: colorScheme.primary),
             ),
             Button(
+              'To Login',
               onPressed: () {
                 // Navigator.pushNamed(context, "login");
                 Navigator.push(context, FadeRoute(builder: (context) {
                   return const LoginPage();
                 }));
               },
-              text: 'To Login',
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('$_counter',
-                  // textScaleFactor: 1.5,
-                  style: const TextStyle(
-                    fontSize: 50,
-                    // color: Colors.blue,
-                  )),
-            ),
-            Image.asset(
-              'assets/images/tv.png',
-              height: 100,
-              width: 100,
-              fit: BoxFit.contain,
-            ),
-            Image.network(
-              'https://static-1253419794.cos.ap-nanjing.myqcloud.com/img/14883291_0_final.png',
-              width: 50,
-              height: 50,
             ),
           ],
         ),
