@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:mfa/pages/login.dart';
 import 'package:mfa/widgets/basic/FadeRoute.dart';
 import 'package:mfa/widgets/basic/Icon.dart';
 
+import '../utils/Platform.dart';
 import '../widgets/basic/Button.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle.dark,
+        systemOverlayStyle: getSystemUiOverlayStyle(context),
         leading: Builder(
           builder: (context) => IconButton(
             onPressed: () {
