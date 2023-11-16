@@ -1,0 +1,2 @@
+Scaffold的appBar 类型为PreferredSizeWidget，如果要自定义appbar需要实现PreferredSizeWidget的preferredSize
+参考文章https://juejin.cn/post/7156481590950887432，通过实现preferredSize可以自定义tabbar的高
