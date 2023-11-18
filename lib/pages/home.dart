@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:mfa/pages/login.dart';
-import 'package:mfa/widgets/basic/FadeRoute.dart';
 import 'package:mfa/widgets/basic/Icon.dart';
 
 import '../utils/Platform.dart';
@@ -80,10 +78,10 @@ class _HomePageState extends State<HomePage> {
             Button(
               'To Login',
               onPressed: () {
-                // Navigator.pushNamed(context, "login");
-                Navigator.push(context, FadeRoute(builder: (context) {
-                  return const LoginPage();
-                }));
+                Navigator.pushNamed(context, "login");
+                // Navigator.push(context, FadeRoute(builder: (context) {
+                //   return const LoginPage();
+                // }));
               },
             ),
           ],
