@@ -10,7 +10,9 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return AppBar(
+        backgroundColor: colorScheme.background,
         systemOverlayStyle: getSystemUiOverlayStyle(context),
         actions: actions,
         title: Text(
