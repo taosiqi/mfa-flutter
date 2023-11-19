@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:mfa/utils/Platform.dart';
+import 'package:mfa/widgets/basic/Button.dart';
 import 'package:mfa/widgets/basic/Icon.dart';
-
-import '../utils/Platform.dart';
-import '../widgets/basic/Button.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,14 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   void initState() {
     super.initState();
@@ -33,7 +24,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     double statusBarHeight = MediaQuery.of(context).padding.top;
-    final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
       appBar: AppBar(
@@ -50,6 +40,7 @@ class _HomePageState extends State<HomePage> {
           'MFA二次验证码',
           style: TextStyle(fontSize: 22),
         ),
+        titleSpacing: 0,
         centerTitle: false,
       ),
       drawer: Drawer(
@@ -71,35 +62,20 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              '$_counter',
-              style: TextStyle(fontSize: 40, color: colorScheme.primary),
-            ),
             Button(
               'To Login',
               onPressed: () {
                 Navigator.pushNamed(context, "login");
-                // Navigator.push(context, FadeRoute(builder: (context) {
-                //   return const LoginPage();
-                // }));
               },
             ),
             Button(
               'To Provider',
               onPressed: () {
                 Navigator.pushNamed(context, "provide");
-                // Navigator.push(context, FadeRoute(builder: (context) {
-                //   return const LoginPage();
-                // }));
               },
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }

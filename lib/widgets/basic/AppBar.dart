@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../utils/Platform.dart';
+import 'package:mfa/utils/Platform.dart';
 
 class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
