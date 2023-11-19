@@ -84,6 +84,15 @@ class _HomePageState extends State<HomePage> {
                 // }));
               },
             ),
+            Button(
+              'To Provider',
+              onPressed: () {
+                Navigator.pushNamed(context, "provide");
+                // Navigator.push(context, FadeRoute(builder: (context) {
+                //   return const LoginPage();
+                // }));
+              },
+            ),
           ],
         ),
       ),

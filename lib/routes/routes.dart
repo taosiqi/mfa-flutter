@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mfa/pages/demo/provider.dart';
 import 'package:mfa/pages/entry/entry.dart';
 import 'package:mfa/pages/entry/scan.dart';
 import 'package:mfa/pages/export/after.dart';
@@ -15,6 +16,7 @@ import 'package:mfa/pages/setting/setting.dart';
 
 final Map<String, WidgetBuilder> routes = {
   "/": (context) => const HomePage(), //注册首页路由
+  'provide': (context) => const ProvidePage(),
   "login": (context) => const LoginPage(),
   "entry": (context) => const EntryPage(),
   "scan": (context) => const ScanPage(),
