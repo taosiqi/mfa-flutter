@@ -71,7 +71,13 @@ class _HomePageState extends State<HomePage> {
             Button(
               'To Provider',
               onPressed: () {
-                Navigator.pushNamed(context, "provide");
+                Navigator.pushNamed(context, "provider");
+              },
+            ),
+            Button(
+              'To List',
+              onPressed: () {
+                Navigator.pushNamed(context, "list");
               },
             ),
           ],

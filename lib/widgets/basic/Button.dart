@@ -14,7 +14,6 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     return MaterialButton(
-        autofocus: true,
         onPressed: onPressed,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(4)),
