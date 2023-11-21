@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:mfa/constants/Color.dart';
 import 'package:mfa/routes/routes.dart';
@@ -28,6 +29,15 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'MFA二次验证码',
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: const [
+          Locale('zh', 'CN'), // 中文简体
+          // 其他支持的语言
+        ],
         debugShowCheckedModeBanner: false,
         darkTheme: AppThemes.darkTheme,
         theme: AppThemes.lightTheme,
