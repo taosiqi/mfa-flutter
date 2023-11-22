@@ -10,6 +10,7 @@ class SafeScrollView extends StatelessWidget {
     return SafeArea(
       bottom: true,
       child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 12),
         child: child,
       ),
     );

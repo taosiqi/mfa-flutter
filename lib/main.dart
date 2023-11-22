@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:mfa/constants/Color.dart';
+import 'package:form_builder_validators/localization/l10n.dart';
 import 'package:mfa/routes/routes.dart';
 import 'package:provider/provider.dart';
+
+import 'constants/Color.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -33,16 +35,13 @@ class MyApp extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
+          FormBuilderLocalizations.delegate,
         ],
-        supportedLocales: const [
-          Locale('zh', 'CN'), // 中文简体
-          // 其他支持的语言
-        ],
+        supportedLocales: const [Locale('zh', 'CN')],
         debugShowCheckedModeBanner: false,
         darkTheme: AppThemes.darkTheme,
         theme: AppThemes.lightTheme,
         themeMode: ThemeMode.system,
-        // 主题模式
         routes: routes,
       ),
     );

@@ -86,6 +86,12 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, "dialog");
               },
             ),
+            Button(
+              'To Form',
+              onPressed: () {
+                Navigator.pushNamed(context, "form");
+              },
+            ),
           ],
         ),
       ),
