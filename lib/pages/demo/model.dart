@@ -27,7 +27,7 @@ class _ModelPageState extends State<ModelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const BasicAppBar(title: 'dayjs'),
+      appBar: const BasicAppBar(title: '使用model 使用Json数据'),
       body: Center(
         child: Column(
           children: [
