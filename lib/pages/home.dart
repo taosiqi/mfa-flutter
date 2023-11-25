@@ -113,6 +113,12 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, "other");
               },
             ),
+            Button(
+              'To Webview',
+              onPressed: () {
+                Navigator.pushNamed(context, "webview");
+              },
+            ),
           ],
         ),
       ),

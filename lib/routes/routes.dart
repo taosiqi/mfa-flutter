@@ -6,6 +6,7 @@ import 'package:mfa/pages/demo/list.dart';
 import 'package:mfa/pages/demo/other.dart';
 import 'package:mfa/pages/demo/provider.dart';
 import 'package:mfa/pages/demo/view.dart';
+import 'package:mfa/pages/demo/webview.dart';
 import 'package:mfa/pages/home.dart';
 import 'package:mfa/pages/login.dart';
 
@@ -16,7 +17,8 @@ final Map<String, WidgetBuilder> routes = {
   'form': (context) => FormPage(),
   'viewPage': (context) => const ViewPage(),
   'other': (context) => const OtherPage(),
-  'day': (context) => DayPage(),
+  'webview': (context) => const WebviewPage(),
+  'day': (context) => const DayPage(),
   'list': (context) => const ListPage(),
   "login": (context) => const LoginPage(),
 };

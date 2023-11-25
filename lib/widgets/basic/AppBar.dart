@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:mfa/utils/Platform.dart';
 
 class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
+  final dynamic title; // Now title can be a String or a Widget
   final List<Widget>? actions;
 
   const BasicAppBar({Key? key, required this.title, this.actions = const []})
-      : super(key: key);
+      : assert(title is String ||
+            title is Widget), // Assert title to be String or Widget
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +17,12 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
         backgroundColor: colorScheme.background,
         systemOverlayStyle: getSystemUiOverlayStyle(context),
         actions: actions,
-        title: Text(
-          title,
-          style: const TextStyle(fontSize: 22),
-        ),
+        title: title is String // Check if title is a String
+            ? Text(
+                title,
+                style: const TextStyle(fontSize: 22),
+              )
+            : title, // Else, it's a Widget so use it directly
         centerTitle: true);
   }
 
