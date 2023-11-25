@@ -1,0 +1,30 @@
+{
+  "id": 1296269,
+  "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
+  "owner": {
+    "login": "octocat"
+  },
+  "private": false,
+  "topics": [
+    "octocat",
+    "atom",
+    "electron",
+    "api"
+  ],
+  "permissions": {
+    "admin": false,
+    "push": false,
+    "pull": true
+  },
+  "security_and_analysis": {
+    "advanced_security": {
+      "status": "enabled"
+    },
+    "secret_scanning": {
+      "status": "enabled"
+    },
+    "secret_scanning_push_protection": {
+      "status": "disabled"
+    }
+  }
+}

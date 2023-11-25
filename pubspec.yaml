@@ -54,6 +54,8 @@ dev_dependencies:
   flutter_launcher_icons: ^0.13.1
   commitlint_cli: ^0.7.1
   husky: ^0.1.6
+  json5_model: ^2.0.3
+  json_serializable: ^6.7.1
 
 flutter_launcher_icons:
   android: true

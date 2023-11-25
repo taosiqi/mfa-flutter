@@ -119,6 +119,12 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, "webview");
               },
             ),
+            Button(
+              'To Model',
+              onPressed: () {
+                Navigator.pushNamed(context, "model");
+              },
+            ),
           ],
         ),
       ),
