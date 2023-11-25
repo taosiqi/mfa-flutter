@@ -92,6 +92,12 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, "form");
               },
             ),
+            Button(
+              'To Page View',
+              onPressed: () {
+                Navigator.pushNamed(context, "viewPage");
+              },
+            ),
           ],
         ),
       ),

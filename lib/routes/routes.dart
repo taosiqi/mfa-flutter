@@ -3,6 +3,7 @@ import 'package:mfa/pages/demo/dialog.dart';
 import 'package:mfa/pages/demo/form.dart';
 import 'package:mfa/pages/demo/list.dart';
 import 'package:mfa/pages/demo/provider.dart';
+import 'package:mfa/pages/demo/view.dart';
 import 'package:mfa/pages/home.dart';
 import 'package:mfa/pages/login.dart';
 
@@ -11,6 +12,7 @@ final Map<String, WidgetBuilder> routes = {
   'provider': (context) => const ProvidePage(),
   'dialog': (context) => const DialogPage(),
   'form': (context) => FormPage(),
+  'viewPage': (context) => const ViewPage(),
   'list': (context) => const ListPage(),
   "login": (context) => const LoginPage(),
 };
