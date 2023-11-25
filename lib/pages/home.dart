@@ -58,9 +58,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           )),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        padding: const EdgeInsets.all(20),
+        child: Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          // alignment: WrapAlignment.center,
           children: <Widget>[
             Button(
               'To Login',
@@ -96,6 +99,12 @@ class _HomePageState extends State<HomePage> {
               'To Page View',
               onPressed: () {
                 Navigator.pushNamed(context, "viewPage");
+              },
+            ),
+            Button(
+              'To Day',
+              onPressed: () {
+                Navigator.pushNamed(context, "day");
               },
             ),
           ],
