@@ -107,6 +107,12 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pushNamed(context, "day");
               },
             ),
+            Button(
+              'To Other',
+              onPressed: () {
+                Navigator.pushNamed(context, "other");
+              },
+            ),
           ],
         ),
       ),
