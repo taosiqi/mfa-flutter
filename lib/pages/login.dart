@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mfa/widgets/basic/AppBar.dart';
 
+typedef ListMapper<X> = Map<String, X>;
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -9,6 +11,13 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  List<ListMapper<int>> data = [
+    {'a': 1, 'b': 2, 'c': 3},
+    {'a': 1, 'b': 2, 'c': 3}
+  ];
+
+  ListMapper<dynamic> data2 = {'a': 1, 'b': 2, 'c': '3'};
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

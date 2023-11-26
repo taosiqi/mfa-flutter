@@ -45,6 +45,7 @@ dependencies:
   form_builder_validators: ^9.0.0
   day: ^0.8.0
   webview_flutter: ^4.4.2
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
