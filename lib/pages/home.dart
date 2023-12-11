@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mfa/utils/Platform.dart';
 import 'package:mfa/widgets/basic/Button.dart';
 import 'package:mfa/widgets/basic/Icon.dart';
@@ -68,61 +69,61 @@ class _HomePageState extends State<HomePage> {
             Button(
               'To Login',
               onPressed: () {
-                Navigator.pushNamed(context, "login");
+                context.push('/login');
               },
             ),
             Button(
               'To Provider',
               onPressed: () {
-                Navigator.pushNamed(context, "provider");
+                context.push('/provider');
               },
             ),
             Button(
               'To List',
               onPressed: () {
-                Navigator.pushNamed(context, "list");
+                context.push('/list');
               },
             ),
             Button(
               'To Dialog',
               onPressed: () {
-                Navigator.pushNamed(context, "dialog");
+                context.push('/dialog');
               },
             ),
             Button(
               'To Form',
               onPressed: () {
-                Navigator.pushNamed(context, "form");
+                context.push('/form');
               },
             ),
             Button(
               'To Page View',
               onPressed: () {
-                Navigator.pushNamed(context, "viewPage");
+                context.push('/viewPage');
               },
             ),
             Button(
               'To Day',
               onPressed: () {
-                Navigator.pushNamed(context, "day");
+                context.push('/day');
               },
             ),
             Button(
               'To Other',
               onPressed: () {
-                Navigator.pushNamed(context, "other");
+                context.push('/other');
               },
             ),
             Button(
               'To Webview',
               onPressed: () {
-                Navigator.pushNamed(context, "webview");
+                context.push('/webview');
               },
             ),
             Button(
               'To Model',
               onPressed: () {
-                Navigator.pushNamed(context, "model");
+                context.push('/model');
               },
             ),
           ],

@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
           create: (ctx) => Person(),
         )
       ],
-      child: MaterialApp(
+      child: MaterialApp.router(
+        routerConfig: router,
         title: 'MFA二次验证码',
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
@@ -42,7 +43,6 @@ class MyApp extends StatelessWidget {
         darkTheme: AppThemes.darkTheme,
         theme: AppThemes.lightTheme,
         themeMode: ThemeMode.system,
-        routes: routes,
       ),
     );
   }
