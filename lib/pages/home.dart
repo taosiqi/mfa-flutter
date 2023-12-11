@@ -1,3 +1,4 @@
+import 'package:dart_totp/dart_totp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:go_router/go_router.dart';
@@ -126,6 +127,7 @@ class _HomePageState extends State<HomePage> {
                 context.push('/model');
               },
             ),
+            Text(TOTP.generateTOTP('KVARB3JSYG6RNYY7HJX2N6ZTUSOXU5RK'))
           ],
         ),
       ),

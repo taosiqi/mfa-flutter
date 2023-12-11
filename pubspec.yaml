@@ -58,6 +58,10 @@ dev_dependencies:
   husky: ^0.1.6
   json5_model: ^2.0.3
   json_serializable: ^6.7.1
+  dart_totp:
+    git:
+      url: https://github.com/taosiqi/dart-totp.git
+      ref: main
 
 flutter_launcher_icons:
   android: true
