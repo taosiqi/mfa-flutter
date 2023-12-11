@@ -18,6 +18,15 @@ class _LoginPageState extends State<LoginPage> {
 
   ListMapper<dynamic> data2 = {'a': 1, 'b': 2, 'c': '3'};
 
+  void test1() {
+    final {"a": value} = data2;
+    debugPrint(value);
+  }
+
+  void loadSth() async {
+    Future(() {}).then((value) {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

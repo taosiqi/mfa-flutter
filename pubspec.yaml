@@ -72,13 +72,13 @@ flutter_native_splash:
 
 package_rename_config:
   android:
-    app_name: MFA
-    package_name: com.taosiqi.mfaapptwo
-    override_old_package: com.taosiqi.mfaapptwo
+    app_name: MFA二次验证码
+    package_name: com.taosiqi.mfacode
+    override_old_package: com.taosiqi.mfacode
   ios:
-    app_name: MFA
+    app_name: MFA二次验证码
     bundle_name: mfa
-    package_name: com.taosiqi.mfaapptwo
+    package_name: com.taosiqi.mfacode
 
 flutter:
   uses-material-design: true
