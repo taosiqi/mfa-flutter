@@ -1,4 +1,4 @@
-package com.taosiqi.mfaapptwo
+package com.taosiqi.mfacode
 
 import io.flutter.embedding.android.FlutterActivity
 
