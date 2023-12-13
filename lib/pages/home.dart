@@ -133,6 +133,12 @@ class _HomePageState extends State<HomePage> {
                 context.push('/adaptive');
               },
             ),
+            Button(
+              'To toast',
+              onPressed: () {
+                context.push('/toast');
+              },
+            ),
             TextButton(
               onPressed: () {},
               child: Text(
