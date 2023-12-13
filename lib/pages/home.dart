@@ -127,7 +127,17 @@ class _HomePageState extends State<HomePage> {
                 context.push('/model');
               },
             ),
-            Text(TOTP.generateTOTP('KVARB3JSYG6RNYY7HJX2N6ZTUSOXU5RK'))
+            Button(
+              'To Adaptive',
+              onPressed: () {
+                context.push('/adaptive');
+              },
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                  'totp ${TOTP.generateTOTP('KVARB3JSYG6RNYY7HJX2N6ZTUSOXU5RK')}'),
+            )
           ],
         ),
       ),

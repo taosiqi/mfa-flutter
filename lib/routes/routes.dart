@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:mfa/pages/demo/adaptive.dart';
 import 'package:mfa/pages/demo/day.dart';
 import 'package:mfa/pages/demo/dialog.dart';
 import 'package:mfa/pages/demo/form.dart';
@@ -13,10 +14,7 @@ import 'package:mfa/pages/login.dart';
 
 final GoRouter router = GoRouter(
   routes: <RouteBase>[
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const HomePage(),
-    ),
+    GoRoute(path: '/', builder: (context, state) => const HomePage()),
     GoRoute(
         path: '/provider', builder: (context, state) => const ProvidePage()),
     GoRoute(path: '/dialog', builder: (context, state) => const DialogPage()),
@@ -28,5 +26,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/day', builder: (context, state) => const DayPage()),
     GoRoute(path: '/list', builder: (context, state) => const ListPage()),
     GoRoute(path: '/login', builder: (context, state) => const LoginPage()),
+    GoRoute(
+        path: '/adaptive', builder: (context, state) => const AdaptivePage()),
   ],
 );
