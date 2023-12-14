@@ -134,9 +134,15 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             Button(
-              'To toast',
+              'To Toast',
               onPressed: () {
                 context.push('/toast');
+              },
+            ),
+            Button(
+              'To Device Info',
+              onPressed: () {
+                context.push('/device');
               },
             ),
             TextButton(

@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:mfa/pages/demo/adaptive.dart';
 import 'package:mfa/pages/demo/day.dart';
+import 'package:mfa/pages/demo/device.dart';
 import 'package:mfa/pages/demo/dialog.dart';
 import 'package:mfa/pages/demo/form.dart';
 import 'package:mfa/pages/demo/list.dart';
@@ -30,5 +31,6 @@ final GoRouter router = GoRouter(
     GoRoute(
         path: '/adaptive', builder: (context, state) => const AdaptivePage()),
     GoRoute(path: '/toast', builder: (context, state) => const ToastPage()),
+    GoRoute(path: '/device', builder: (context, state) => const DevicePage()),
   ],
 );
