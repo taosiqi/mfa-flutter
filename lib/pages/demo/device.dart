@@ -31,15 +31,18 @@ class _DevicePageState extends State<DevicePage> {
     if (deviceInfo == null) {
       return const SizedBox.shrink();
     } else {
+      // 解构写法
+      var (:deviceName, :systemVersion, :appVersion, :appName) = deviceInfo!;
+
       return Scaffold(
         appBar: const BasicAppBar(title: 'device info'),
         body: Center(
           child: Column(
             children: [
-              Text(deviceInfo!.deviceName),
-              Text(deviceInfo!.systemVersion),
-              Text(deviceInfo!.appVersion),
-              Text(deviceInfo!.appName),
+              Text(deviceName),
+              Text(systemVersion),
+              Text(appVersion),
+              Text(appName),
             ],
           ),
         ),
