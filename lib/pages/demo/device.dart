@@ -10,25 +10,25 @@ class DevicePage extends StatefulWidget {
 }
 
 class _DevicePageState extends State<DevicePage> {
-  DeviceInfo? _deviceInfo;
+  DeviceInfo? deviceInfo;
 
-  Future<void> _initDeviceInfo() async {
-    final deviceInfo = await DeviceInfoUtil.getDeviceInfo();
+  Future<void> initDeviceInfo() async {
+    final data = await DeviceInfoUtil.getDeviceInfo();
 
     setState(() {
-      _deviceInfo = deviceInfo;
+      deviceInfo = data;
     });
   }
 
   @override
   void initState() {
     super.initState();
-    _initDeviceInfo();
+    initDeviceInfo();
   }
 
   @override
   Widget build(BuildContext context) {
-    if (_deviceInfo == null) {
+    if (deviceInfo == null) {
       return const SizedBox.shrink();
     } else {
       return Scaffold(
@@ -36,10 +36,10 @@ class _DevicePageState extends State<DevicePage> {
         body: Center(
           child: Column(
             children: [
-              Text(_deviceInfo!.deviceName),
-              Text(_deviceInfo!.systemVersion),
-              Text(_deviceInfo!.appVersion),
-              Text(_deviceInfo!.appName),
+              Text(deviceInfo!.deviceName),
+              Text(deviceInfo!.systemVersion),
+              Text(deviceInfo!.appVersion),
+              Text(deviceInfo!.appName),
             ],
           ),
         ),
