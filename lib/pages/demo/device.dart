@@ -32,7 +32,7 @@ class _DevicePageState extends State<DevicePage> {
       return const SizedBox.shrink();
     } else {
       return Scaffold(
-        appBar: const BasicAppBar(title: 'adaptive'),
+        appBar: const BasicAppBar(title: 'device info'),
         body: Center(
           child: Column(
             children: [
