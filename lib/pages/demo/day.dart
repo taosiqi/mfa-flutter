@@ -1,7 +1,7 @@
 import 'package:day/day.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
 
 class DayPage extends StatefulWidget {
   const DayPage({super.key});

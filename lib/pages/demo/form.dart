@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
-import 'package:mfa/widgets/basic/Button.dart';
-import 'package:mfa/widgets/basic/SafeScrollView.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
+import 'package:mfa/widgets/basic/button.dart';
+import 'package:mfa/widgets/basic/safe_scroll_view.dart';
 
 class FormPage extends StatelessWidget {
   FormPage({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebviewPage extends StatefulWidget {

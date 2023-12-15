@@ -2,9 +2,9 @@ import 'package:dart_totp/dart_totp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:go_router/go_router.dart';
-import 'package:mfa/utils/Platform.dart';
-import 'package:mfa/widgets/basic/Button.dart';
-import 'package:mfa/widgets/basic/Icon.dart';
+import 'package:mfa/utils/platform.dart';
+import 'package:mfa/widgets/basic/button.dart';
+import 'package:mfa/widgets/basic/icon.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

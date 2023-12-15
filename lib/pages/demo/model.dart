@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mfa/models/user/user.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
 
 class ModelPage extends StatefulWidget {
   const ModelPage({super.key});

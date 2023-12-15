@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
 
 typedef ListMapper<X> = Map<String, X>;
 

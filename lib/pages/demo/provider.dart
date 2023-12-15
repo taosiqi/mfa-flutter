@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mfa/main.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
-import 'package:mfa/widgets/basic/Button.dart';
+import 'package:mfa/providers/count.dart';
+import 'package:mfa/providers/person.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
+import 'package:mfa/widgets/basic/button.dart';
 import 'package:provider/provider.dart';
 
 class ProvidePage extends StatelessWidget {

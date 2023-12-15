@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
-import 'package:mfa/widgets/basic/Button.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
+import 'package:mfa/widgets/basic/button.dart';
 import 'package:oktoast/oktoast.dart';
 
 class ToastPage extends StatefulWidget {

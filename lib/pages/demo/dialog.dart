@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker_plus/flutter_datetime_picker_plus.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
-import 'package:mfa/widgets/basic/Button.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
+import 'package:mfa/widgets/basic/button.dart';
 
 class DialogPage extends StatelessWidget {
   const DialogPage({Key? key}) : super(key: key);

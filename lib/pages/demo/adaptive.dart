@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
 
 class AdaptivePage extends StatefulWidget {
   const AdaptivePage({super.key});

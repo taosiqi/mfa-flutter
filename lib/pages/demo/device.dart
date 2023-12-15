@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mfa/utils/DeviceInfo.dart';
-import 'package:mfa/widgets/basic/AppBar.dart';
+import 'package:mfa/utils/deviceInfo.dart';
+import 'package:mfa/widgets/basic/app_bar.dart';
 
 class DevicePage extends StatefulWidget {
   const DevicePage({super.key});

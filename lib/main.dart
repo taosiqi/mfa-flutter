@@ -3,11 +3,13 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_builder_validators/localization/l10n.dart';
+import 'package:mfa/providers/count.dart';
+import 'package:mfa/providers/person.dart';
 import 'package:mfa/routes/routes.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
 
-import 'constants/Color.dart';
+import 'constants/color.dart';
 
 main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -59,23 +61,5 @@ class MyApp extends StatelessWidget {
         },
       ),
     );
-  }
-}
-
-class CountNotifier extends ChangeNotifier {
-  int count = 0;
-
-  void increment() {
-    count++;
-    notifyListeners();
-  }
-}
-
-class Person with ChangeNotifier {
-  int age = 1;
-
-  void changAge() {
-    age += 1;
-    notifyListeners();
   }
 }

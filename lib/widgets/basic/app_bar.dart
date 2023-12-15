@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mfa/utils/Platform.dart';
+import 'package:mfa/utils/platform.dart';
 
 class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
   final dynamic title; // Now title can be a String or a Widget
