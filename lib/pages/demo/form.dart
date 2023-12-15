@@ -22,33 +22,35 @@ class FormPage extends StatelessWidget {
             child: Column(
               children: [
                 FormBuilderTextField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   key: _emailFieldKey,
                   name: 'email',
                   decoration: const InputDecoration(labelText: '邮箱'),
                   // 用库的效验
-                  // validator: FormBuilderValidators.compose([
-                  //   FormBuilderValidators.required(),
-                  //   FormBuilderValidators.email(),
-                  // ]),
-                  validator: (val) {
-                    // 自定义效验
-                    // debugPrint(
-                    //     _formKey.currentState?.fields['password']?.value); 打印其他字段
-                    // debugPrint(val); 打印当前字段
-                    if (val == null) {
-                      return '请输入';
-                    }
-                    return null;
-                    // return null;
-                  },
+                  validator: FormBuilderValidators.compose([
+                    FormBuilderValidators.required(),
+                    FormBuilderValidators.email(),
+                  ]),
+                  // validator: (val) {
+                  //   // 自定义效验
+                  //   // debugPrint(
+                  //   //     _formKey.currentState?.fields['password']?.value); 打印其他字段
+                  //   // debugPrint(val); 打印当前字段
+                  //   if (val == null) {
+                  //     return '请输入';
+                  //   }
+                  //   return null;
+                  //   // return null;
+                  // },
                 ),
                 const SizedBox(height: 10),
                 FormBuilderTextField(
+                  autovalidateMode: AutovalidateMode.onUserInteraction,
                   name: 'password',
                   decoration: const InputDecoration(labelText: '密码'),
                   obscureText: true,
                   validator: FormBuilderValidators.compose([
-                    FormBuilderValidators.required(),
+                    FormBuilderValidators.minLength(10),
                   ]),
                 ),
                 const SizedBox(height: 10),
