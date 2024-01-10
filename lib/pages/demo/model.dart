@@ -11,17 +11,18 @@ class ModelPage extends StatefulWidget {
 
 class _ModelPageState extends State<ModelPage> {
   var u = User.fromJson({
-    "id": 1296269,
-    "node_id": "MDEwOlJlcG9zaXRvcnkxMjk2MjY5",
-    "owner": {"login": "小猪努力学前端"},
-    "private": false,
-    "topics": ["octocat", "atom", "electron", "api"],
-    "permissions": {"admin": false, "push": false, "pull": true},
-    "security_and_analysis": {
-      "advanced_security": {"status": "enabled"},
-      "secret_scanning": {"status": "enabled"},
-      "secret_scanning_push_protection": {"status": "disabled"}
-    }
+    "username": "user1",
+    "email": "",
+    "open_id": "oupNV48-JG37YoY6F4H78ulZouk8",
+    "password": "",
+    "gender": "2",
+    "phone": "",
+    "profile_picture_url":
+        "https://6d66-mfa-view-2g2ye6bi6948acdd-1258967922.tcb.qcloud.la/img/avatar.png",
+    "is_deleted": false,
+    "created_at": 1704706894508,
+    "updated_at": 1704870248582,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5-mlIp80UUCoD8KoLkE"
   });
 
   @override
@@ -31,7 +32,7 @@ class _ModelPageState extends State<ModelPage> {
       body: Center(
         child: Column(
           children: [
-            Text(u.owner.login),
+            Text(u.username),
           ],
         ),
       ),

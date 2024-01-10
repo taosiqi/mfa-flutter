@@ -5,139 +5,55 @@ part 'user.g.dart';
 @JsonSerializable(explicitToJson: true)
 class User {
   User(
-      {required this.id,
-      required this.nodeId,
-      required this.owner,
-      required this.private,
-      required this.topics,
-      required this.permissions,
-      required this.securityAndAnalysis});
+      {required this.username,
+      required this.email,
+      required this.openId,
+      required this.password,
+      required this.gender,
+      required this.phone,
+      required this.profilePictureUrl,
+      required this.isDeleted,
+      required this.createdAt,
+      required this.updatedAt,
+      required this.token});
 
-  @JsonKey(name: "id", defaultValue: 0)
-  int id;
+  @JsonKey(name: "username", defaultValue: "")
+  String username;
 
-  @JsonKey(name: "node_id", defaultValue: "")
-  String nodeId;
+  @JsonKey(name: "email", defaultValue: "")
+  String email;
 
-  @JsonKey(name: "owner")
-  Owner owner;
+  @JsonKey(name: "open_id", defaultValue: "")
+  String openId;
 
-  @JsonKey(name: "private", defaultValue: false)
-  bool private;
+  @JsonKey(name: "password", defaultValue: "")
+  String password;
 
-  @JsonKey(name: "topics", defaultValue: [])
-  List<String> topics;
+  @JsonKey(name: "gender", defaultValue: "")
+  String gender;
 
-  @JsonKey(name: "permissions")
-  Permissions permissions;
+  @JsonKey(name: "phone", defaultValue: "")
+  String phone;
 
-  @JsonKey(name: "security_and_analysis")
-  SecurityAndAnalysis securityAndAnalysis;
+  @JsonKey(name: "profile_picture_url", defaultValue: "")
+  String profilePictureUrl;
+
+  @JsonKey(name: "is_deleted", defaultValue: false)
+  bool isDeleted;
+
+  @JsonKey(name: "created_at", defaultValue: 0)
+  int createdAt;
+
+  @JsonKey(name: "updated_at", defaultValue: 0)
+  int updatedAt;
+
+  @JsonKey(name: "token", defaultValue: "")
+  String token;
 
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
   Map<String, dynamic> toJson() => _$UserToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class Owner {
-  Owner(
-      {required this.login});
-
-  @JsonKey(name: "login", defaultValue: "")
-  String login;
-
-
-  factory Owner.fromJson(Map<String, dynamic> json) => _$OwnerFromJson(json);
-
-  Map<String, dynamic> toJson() => _$OwnerToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class Permissions {
-  Permissions(
-      {required this.admin,
-      required this.push,
-      required this.pull});
-
-  @JsonKey(name: "admin", defaultValue: false)
-  bool admin;
-
-  @JsonKey(name: "push", defaultValue: false)
-  bool push;
-
-  @JsonKey(name: "pull", defaultValue: false)
-  bool pull;
-
-
-  factory Permissions.fromJson(Map<String, dynamic> json) => _$PermissionsFromJson(json);
-
-  Map<String, dynamic> toJson() => _$PermissionsToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class AdvancedSecurity {
-  AdvancedSecurity(
-      {required this.status});
-
-  @JsonKey(name: "status", defaultValue: "")
-  String status;
-
-
-  factory AdvancedSecurity.fromJson(Map<String, dynamic> json) => _$AdvancedSecurityFromJson(json);
-
-  Map<String, dynamic> toJson() => _$AdvancedSecurityToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class SecretScanning {
-  SecretScanning(
-      {required this.status});
-
-  @JsonKey(name: "status", defaultValue: "")
-  String status;
-
-
-  factory SecretScanning.fromJson(Map<String, dynamic> json) => _$SecretScanningFromJson(json);
-
-  Map<String, dynamic> toJson() => _$SecretScanningToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class SecretScanningPushProtection {
-  SecretScanningPushProtection(
-      {required this.status});
-
-  @JsonKey(name: "status", defaultValue: "")
-  String status;
-
-
-  factory SecretScanningPushProtection.fromJson(Map<String, dynamic> json) => _$SecretScanningPushProtectionFromJson(json);
-
-  Map<String, dynamic> toJson() => _$SecretScanningPushProtectionToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class SecurityAndAnalysis {
-  SecurityAndAnalysis(
-      {required this.advancedSecurity,
-      required this.secretScanning,
-      required this.secretScanningPushProtection});
-
-  @JsonKey(name: "advanced_security")
-  AdvancedSecurity advancedSecurity;
-
-  @JsonKey(name: "secret_scanning")
-  SecretScanning secretScanning;
-
-  @JsonKey(name: "secret_scanning_push_protection")
-  SecretScanningPushProtection secretScanningPushProtection;
-
-
-  factory SecurityAndAnalysis.fromJson(Map<String, dynamic> json) => _$SecurityAndAnalysisFromJson(json);
-
-  Map<String, dynamic> toJson() => _$SecurityAndAnalysisToJson(this);
 }
 
 

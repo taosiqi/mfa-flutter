@@ -4,6 +4,7 @@ import 'package:mfa/pages/demo/day.dart';
 import 'package:mfa/pages/demo/device.dart';
 import 'package:mfa/pages/demo/dialog.dart';
 import 'package:mfa/pages/demo/form.dart';
+import 'package:mfa/pages/demo/http.dart';
 import 'package:mfa/pages/demo/list.dart';
 import 'package:mfa/pages/demo/model.dart';
 import 'package:mfa/pages/demo/other.dart';
@@ -32,5 +33,6 @@ final GoRouter router = GoRouter(
         path: '/adaptive', builder: (context, state) => const AdaptivePage()),
     GoRoute(path: '/toast', builder: (context, state) => const ToastPage()),
     GoRoute(path: '/device', builder: (context, state) => const DevicePage()),
+    GoRoute(path: '/http', builder: (context, state) => const HttpPage()),
   ],
 );

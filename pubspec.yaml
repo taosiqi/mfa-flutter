@@ -50,6 +50,7 @@ dependencies:
   flutter_screenutil: ^5.9.0
   oktoast: ^3.4.0
   device_info_plus: ^9.1.1
+  dio: ^5.4.0
 
 dev_dependencies:
   flutter_test:

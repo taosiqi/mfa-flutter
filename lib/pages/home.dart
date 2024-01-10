@@ -145,11 +145,14 @@ class _HomePageState extends State<HomePage> {
                 context.push('/device');
               },
             ),
+            Button('To Http', onPressed: () {
+              context.push('/http');
+            }),
             TextButton(
               onPressed: () {},
               child: Text(
                   'totp ${TOTP.generateTOTP('KVARB3JSYG6RNYY7HJX2N6ZTUSOXU5RK')}'),
-            )
+            ),
           ],
         ),
       ),
