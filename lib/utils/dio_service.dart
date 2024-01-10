@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:mfa/models/api_response/api_response.dart';
+import 'package:oktoast/oktoast.dart';
 
 class DioService {
   static final DioService _instance = DioService._internal();
@@ -45,13 +46,14 @@ class DioService {
       }
       final jsonData = response.data;
       if (jsonData['code'] != 200) {
-        throw Exception('Failed to load data: ${jsonData['msg']}');
+        throw Exception('${jsonData['msg']}');
       }
-      // String jsonString = json.encode(response.data);
-      // debugPrint(jsonString);
       return ApiResponse.fromResponse(response, fromJsonT);
     } on DioException catch (e) {
-      throw Exception('Failed to post data: ${e.message}');
+      throw Exception(e.message);
+    } on Exception catch (e) {
+      showToast(e.toString());
+      throw Exception(e.toString());
     }
   }
 
