@@ -20,7 +20,7 @@ class _HttpPageState extends State<HttpPage> {
   }
 
   getUserInfo() async {
-    User user = await loginByPassword('user1', '1234568');
+    User user = await loginByPassword('user1', '123456');
     setState(() {
       userInfo = user;
     });

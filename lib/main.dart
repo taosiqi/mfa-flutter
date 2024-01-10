@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_builder_validators/localization/l10n.dart';
 import 'package:mfa/providers/count.dart';
 import 'package:mfa/providers/person.dart';
+import 'package:mfa/providers/user.dart';
 import 'package:mfa/routes/routes.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
@@ -40,6 +41,9 @@ class MyApp extends StatelessWidget {
               ),
               ChangeNotifierProvider<Person>(
                 create: (ctx) => Person(),
+              ),
+              ChangeNotifierProvider<UserProvider>(
+                create: (ctx) => UserProvider(),
               )
             ],
             child: MaterialApp.router(
