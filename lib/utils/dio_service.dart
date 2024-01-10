@@ -32,16 +32,24 @@ class DioService {
   }
 
   // 定义一个泛型方法，用于执行POST请求并解析ApiResponse
-  Future<T> postRequest<T>(
+  Future<ApiResponse<T>> postRequest<T>(
     String endpoint,
     Map<String, dynamic> data,
     T Function(dynamic) fromJsonT,
   ) async {
     try {
       final response = await _dio.post(endpoint, data: data);
+
+      if (response.statusCode != 200) {
+        throw Exception('Failed to load data: ${response.statusCode}');
+      }
+      final jsonData = response.data;
+      if (jsonData['code'] != 200) {
+        throw Exception('Failed to load data: ${jsonData['msg']}');
+      }
       // String jsonString = json.encode(response.data);
       // debugPrint(jsonString);
-      return ApiResponse.fromResponse(response, fromJsonT).data;
+      return ApiResponse.fromResponse(response, fromJsonT);
     } on DioException catch (e) {
       throw Exception('Failed to post data: ${e.message}');
     }

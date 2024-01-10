@@ -11,22 +11,3 @@
   "updated_at": 1704870248582,
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiODFkNzY2MDY1OWJjMzRlMDA4YjU2MDQyNmNkZTBiNyIsImlhdCI6MTcwNDg3MDQwMiwiZXhwIjoxNzA0OTU2ODAyfQ.dYgsjNeijOBdvk1iCrGQiNl7d-mlIp80UUCoD8KoLkE"
 }
-
-{
-  "code": 200,
-  "msg": "操作成功",
-  "data": {
-    "_id": "b81d7660659bc34e008b560426cde0b7",
-    "username": "user1",
-    "email": "",
-    "open_id": "oupNV48-JG37YoY6F4H78ulZouk8",
-    "password": "$2a$10$FqtgEqqoqsXyYpPZeRFho.Wnn3wXt2pmyk/tFMSsiiCfPkiqMMFXS",
-    "gender": "2",
-    "phone": "",
-    "profile_picture_url": "https://6d66-mfa-view-2g2ye6bi6948acdd-1258967922.tcb.qcloud.la/img/avatar.png",
-    "is_deleted": false,
-    "created_at": 1704706894508,
-    "updated_at": 1704870248582,
-    "token": ""
-  }
-}
