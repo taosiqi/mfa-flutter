@@ -7,7 +7,7 @@ class UserReq {
   UserReq(
       {required this.username,
       required this.password,
-      this.action = "loginByPassword"});
+      this.action = 'loginByPassword'});
 
   @JsonKey(name: "username", defaultValue: "")
   String username;
@@ -15,7 +15,7 @@ class UserReq {
   @JsonKey(name: "password", defaultValue: "")
   String password;
 
-  @JsonKey(name: "action", defaultValue: "")
+  @JsonKey(name: "action", defaultValue: "loginByPassword")
   String action;
 
   factory UserReq.fromJson(Map<String, dynamic> json) =>
