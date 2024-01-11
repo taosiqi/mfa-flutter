@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:mfa/models/api_response/api_response.dart';
 import 'package:mfa/providers/user.dart';
+import 'package:mfa/routes/routes.dart';
 import 'package:oktoast/oktoast.dart';
 
 class DioService {
@@ -74,8 +75,11 @@ class DioService {
           throw Exception('Failed to load data: ${response.statusCode}');
         }
         final jsonData = response.data;
-        if (jsonData['code'] != 200) {
+        if (jsonData['code'] == 200) {
           showToast('${jsonData['msg']}');
+          if (jsonData['code'] == 401) {
+            router.go('/login');
+          }
           throw Exception('${jsonData['msg']}');
         }
         return handler.next(response);
