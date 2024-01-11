@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mfa/apis/user.dart';
 import 'package:mfa/models/user/user.dart';
+import 'package:mfa/models/user_req/user_req.dart';
 import 'package:mfa/widgets/basic/app_bar.dart';
 import 'package:mfa/widgets/basic/async_data_loader.dart';
 
@@ -19,7 +20,8 @@ class _HttpPageState extends State<HttpPage> {
   }
 
   getUserInfo() async {
-    User user = await loginByPassword('user1', '123456');
+    User user =
+        await loginByPassword(UserReq(password: '123456', username: 'user1'));
     return user;
   }
 

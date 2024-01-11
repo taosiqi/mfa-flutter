@@ -1,11 +1,12 @@
 import 'package:mfa/models/api_response/api_response.dart';
 import 'package:mfa/models/user/user.dart';
+import 'package:mfa/models/user_req/user_req.dart';
 import 'package:mfa/utils/dio_service.dart';
 
-Future<User> loginByPassword(String username, String password) async {
+Future<User> loginByPassword(UserReq params) async {
   final ApiResponse<User> apiResponse = await dioService.postRequest<User>(
     '',
-    {'action': "loginByPassword", 'username': username, 'password': password},
+    params.toJson(), //这里不用实例化是因为params已经实例化了
     (data) => User.fromJson(data),
   );
   return apiResponse.data;
