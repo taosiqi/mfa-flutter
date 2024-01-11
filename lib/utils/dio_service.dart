@@ -67,7 +67,6 @@ class DioService {
           options.headers['Authorization'] = 'Bearer $token';
         }
         return handler.next(options);
-        return handler.next(options);
       },
       onResponse: (response, handler) {
         if (response.statusCode != 200) {
