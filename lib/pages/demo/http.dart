@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mfa/apis/user.dart';
 import 'package:mfa/models/user/user.dart';
 import 'package:mfa/widgets/basic/app_bar.dart';
+import 'package:mfa/widgets/basic/async_data_loader.dart';
 
 class HttpPage extends StatefulWidget {
   const HttpPage({super.key});
@@ -11,8 +12,6 @@ class HttpPage extends StatefulWidget {
 }
 
 class _HttpPageState extends State<HttpPage> {
-  User? userInfo;
-
   @override
   initState() {
     super.initState();
@@ -21,23 +20,25 @@ class _HttpPageState extends State<HttpPage> {
 
   getUserInfo() async {
     User user = await loginByPassword('user1', '123456');
-    setState(() {
-      userInfo = user;
-    });
+    return user;
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const BasicAppBar(title: '使用Http请求'),
-      body: Center(
-        child: Column(
-          children: [
-            userInfo == null
-                ? const CircularProgressIndicator()
-                : Text("name is ${userInfo!.username}")
-          ],
-        ),
+      body: AsyncDataLoader(
+        futures: [
+          getUserInfo(),
+        ],
+        builder: (data) {
+          User user = data[0];
+          return Column(children: [
+            Center(
+              child: Text('this is name : ${user.username}'),
+            )
+          ]);
+        },
       ),
     );
   }

@@ -71,12 +71,10 @@ class DioService {
       },
       onResponse: (response, handler) {
         if (response.statusCode != 200) {
-          showToast('Failed to load data: ${response.statusCode}');
-          throw Exception('Failed to load data: ${response.statusCode}');
+          throw Exception(response.statusCode);
         }
         final jsonData = response.data;
-        if (jsonData['code'] == 200) {
-          showToast('${jsonData['msg']}');
+        if (jsonData['code'] != 200) {
           if (jsonData['code'] == 401) {
             router.go('/login');
           }
@@ -85,11 +83,11 @@ class DioService {
         return handler.next(response);
       },
       onError: (DioException e, handler) {
-        String errorMessage = e.error?.toString() ?? 'Unknown error';
+        String errorMessage = e.error?.toString() ?? 'error';
         if (e.response != null) {
           errorMessage += ' - ${e.response!.statusCode}';
         }
-        showToast('Error occurred: $errorMessage');
+        showToast(errorMessage);
         return handler.next(e);
       },
     ));
