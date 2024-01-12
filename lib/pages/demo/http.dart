@@ -16,12 +16,16 @@ class _HttpPageState extends State<HttpPage> {
   @override
   initState() {
     super.initState();
-    getUserInfo();
+    // getUserInfo();
   }
 
-  getUserInfo() async {
+  Future<User> getUserInfo() async {
+    debugPrint('1');
     User user =
         await loginByPassword(UserReq(password: '123456', username: 'user1'));
+    debugPrint(user.username);
+    debugPrint('2');
+
     return user;
   }
 
