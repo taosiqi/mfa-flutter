@@ -1,5 +1,5 @@
-import 'package:mfa/models/api_response/api_response.dart';
-import 'package:mfa/models/user/user.dart';
+import 'package:mfa/models/api_res/api_res.dart';
+import 'package:mfa/models/user_res/user_res.dart';
 import 'package:mfa/models/user_req/user_req.dart';
 import 'package:mfa/utils/dio_service.dart';
 

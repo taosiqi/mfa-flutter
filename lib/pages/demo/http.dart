@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mfa/apis/user.dart';
-import 'package:mfa/models/user/user.dart';
 import 'package:mfa/models/user_req/user_req.dart';
+import 'package:mfa/models/user_res/user_res.dart';
 import 'package:mfa/widgets/basic/app_bar.dart';
 import 'package:mfa/widgets/basic/async_data_loader.dart';
 

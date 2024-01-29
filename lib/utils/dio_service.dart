@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:mfa/models/api_response/api_response.dart';
+import 'package:mfa/models/api_res/api_res.dart';
 import 'package:mfa/providers/user.dart';
 import 'package:mfa/routes/routes.dart';
 import 'package:oktoast/oktoast.dart';
