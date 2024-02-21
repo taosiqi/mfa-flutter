@@ -29,7 +29,9 @@ class _DevicePageState extends State<DevicePage> {
   @override
   Widget build(BuildContext context) {
     if (deviceInfo == null) {
-      return const SizedBox.shrink();
+      // loading
+      return const Center(child: CircularProgressIndicator());
+      // return const SizedBox.shrink();
     } else {
       // 解构写法
       var (:deviceName, :systemVersion, :appVersion, :appName) = deviceInfo!;

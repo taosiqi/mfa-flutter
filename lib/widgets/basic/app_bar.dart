@@ -5,10 +5,9 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
   final dynamic title; // Now title can be a String or a Widget
   final List<Widget>? actions;
 
-  const BasicAppBar({Key? key, required this.title, this.actions = const []})
-      : assert(title is String ||
-            title is Widget), // Assert title to be String or Widget
-        super(key: key);
+  const BasicAppBar({super.key, required this.title, this.actions = const []})
+      : assert((title is String && title.length >= 2) || title is Widget,
+            'title must be a string of at least 2 characters or a widget');
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +21,8 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
                 title,
                 style: const TextStyle(fontSize: 22),
               )
-            : title, // Else, it's a Widget so use it directly
+            : title,
+        // Else, it's a Widget so use it directly
         centerTitle: true);
   }
 
