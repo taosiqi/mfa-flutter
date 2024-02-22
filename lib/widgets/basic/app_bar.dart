@@ -6,7 +6,7 @@ class BasicAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget>? actions;
 
   const BasicAppBar({super.key, required this.title, this.actions = const []})
-      : assert((title is String && title.length >= 2) || title is Widget,
+      : assert(title is String || title is Widget,
             'title must be a string of at least 2 characters or a widget');
 
   @override
