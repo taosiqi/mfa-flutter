@@ -6,7 +6,7 @@ import 'package:mfa/widgets/basic/button.dart';
 import 'package:provider/provider.dart';
 
 class ProvidePage extends StatelessWidget {
-  const ProvidePage({Key? key}) : super(key: key);
+  const ProvidePage({super.key});
 
   @override
   Widget build(BuildContext context) {

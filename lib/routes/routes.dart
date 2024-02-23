@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mfa/pages/demo/adaptive.dart';
 import 'package:mfa/pages/demo/day.dart';
@@ -27,7 +28,9 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/webview', builder: (context, state) => const WebviewPage()),
     GoRoute(path: '/model', builder: (context, state) => const ModelPage()),
     GoRoute(path: '/day', builder: (context, state) => const DayPage()),
-    GoRoute(path: '/list', builder: (context, state) => const ListPage()),
+    GoRoute(
+        path: '/list',
+        builder: (context, state) => const ListPage(key: ValueKey('ListPage'))),
     GoRoute(path: '/login', builder: (context, state) => const LoginPage()),
     GoRoute(
         path: '/adaptive', builder: (context, state) => const AdaptivePage()),

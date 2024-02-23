@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mfa/widgets/basic/app_bar.dart';
 
 class ViewPage extends StatelessWidget {
-  const ViewPage({Key? key}) : super(key: key);
+  const ViewPage({super.key});
 
   @override
   Widget build(BuildContext context) {

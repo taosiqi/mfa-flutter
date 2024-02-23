@@ -4,7 +4,7 @@ import 'package:mfa/widgets/basic/app_bar.dart';
 import 'package:mfa/widgets/basic/button.dart';
 
 class DialogPage extends StatelessWidget {
-  const DialogPage({Key? key}) : super(key: key);
+  const DialogPage({super.key});
 
   // 原始弹窗
   Future<int?> showListDialog(BuildContext context) async {

@@ -7,7 +7,7 @@ import 'package:mfa/widgets/basic/button.dart';
 import 'package:mfa/widgets/basic/safe_scroll_view.dart';
 
 class FormPage extends StatelessWidget {
-  FormPage({Key? key}) : super(key: key);
+  FormPage({super.key});
   final _formKey = GlobalKey<FormBuilderState>();
 
   final _emailFieldKey = GlobalKey<FormBuilderFieldState>(); //定义表单元素的key
@@ -87,7 +87,7 @@ class FormPage extends StatelessWidget {
                       _formKey.currentState?.validate();
                       debugPrint(
                           _formKey.currentState?.instantValue.toString());
-                      logger.d(_emailFieldKey.currentState?.value);
+                      logger.w(_emailFieldKey.currentState?.value);
                     }),
                     const SizedBox(width: 30),
                     Button('reset', onPressed: () {

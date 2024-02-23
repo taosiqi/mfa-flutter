@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mfa/widgets/basic/app_bar.dart';
 
 class ListPage extends StatelessWidget {
-  const ListPage({Key? key}) : super(key: key);
+  const ListPage({super.key});
 
   // 上拉加载
   Future<void> _onRefresh() async {
