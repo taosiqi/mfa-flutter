@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mfa/pages/demo/adaptive.dart';
 import 'package:mfa/pages/demo/day.dart';
@@ -15,27 +15,70 @@ import 'package:mfa/pages/demo/view.dart';
 import 'package:mfa/pages/demo/webview.dart';
 import 'package:mfa/pages/home.dart';
 import 'package:mfa/pages/login.dart';
+import 'package:mfa/routes/slide_page_builder.dart';
 
 final GoRouter router = GoRouter(
   routes: <RouteBase>[
-    GoRoute(path: '/', builder: (context, state) => const HomePage()),
     GoRoute(
-        path: '/provider', builder: (context, state) => const ProvidePage()),
-    GoRoute(path: '/dialog', builder: (context, state) => const DialogPage()),
-    GoRoute(path: '/form', builder: (context, state) => FormPage()),
-    GoRoute(path: '/viewPage', builder: (context, state) => const ViewPage()),
-    GoRoute(path: '/other', builder: (context, state) => const OtherPage()),
-    GoRoute(path: '/webview', builder: (context, state) => const WebviewPage()),
-    GoRoute(path: '/model', builder: (context, state) => const ModelPage()),
-    GoRoute(path: '/day', builder: (context, state) => const DayPage()),
+      path: '/',
+      pageBuilder: slidePageBuilder((context) => const HomePage()),
+    ),
     GoRoute(
-        path: '/list',
-        builder: (context, state) => const ListPage(key: ValueKey('ListPage'))),
-    GoRoute(path: '/login', builder: (context, state) => const LoginPage()),
+      path: '/provider',
+      pageBuilder: slidePageBuilder((context) => const ProvidePage()),
+    ),
     GoRoute(
-        path: '/adaptive', builder: (context, state) => const AdaptivePage()),
-    GoRoute(path: '/toast', builder: (context, state) => const ToastPage()),
-    GoRoute(path: '/device', builder: (context, state) => const DevicePage()),
-    GoRoute(path: '/http', builder: (context, state) => const HttpPage()),
+      path: '/dialog',
+      pageBuilder: slidePageBuilder((context) => const DialogPage()),
+    ),
+    GoRoute(
+      path: '/form',
+      pageBuilder: slidePageBuilder((context) => FormPage()),
+    ),
+    GoRoute(
+      path: '/viewPage',
+      pageBuilder: slidePageBuilder((context) => const ViewPage()),
+    ),
+    GoRoute(
+      path: '/other',
+      pageBuilder: slidePageBuilder((context) => const OtherPage()),
+    ),
+    GoRoute(
+      path: '/webview',
+      pageBuilder: slidePageBuilder((context) => const WebviewPage()),
+    ),
+    GoRoute(
+      path: '/model',
+      pageBuilder: slidePageBuilder((context) => const ModelPage()),
+    ),
+    GoRoute(
+      path: '/day',
+      pageBuilder: slidePageBuilder((context) => const DayPage()),
+    ),
+    GoRoute(
+      path: '/list',
+      pageBuilder: slidePageBuilder(
+          (context) => const ListPage(key: ValueKey('ListPage'))),
+    ),
+    GoRoute(
+      path: '/login',
+      pageBuilder: slidePageBuilder((context) => const LoginPage()),
+    ),
+    GoRoute(
+      pageBuilder: slidePageBuilder((context) => const AdaptivePage()),
+      path: '/adaptive',
+    ),
+    GoRoute(
+      path: '/toast',
+      pageBuilder: slidePageBuilder((context) => const ToastPage()),
+    ),
+    GoRoute(
+      path: '/device',
+      pageBuilder: slidePageBuilder((context) => const DevicePage()),
+    ),
+    GoRoute(
+      path: '/http',
+      pageBuilder: slidePageBuilder((context) => const HttpPage()),
+    ),
   ],
 );
