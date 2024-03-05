@@ -16,16 +16,15 @@ class _SyncDevicePageState extends State<SyncDevicePage> {
     super.initState();
   }
 
-  Future<void> sleep() async {
-    return Future.delayed(const Duration(seconds: 4));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const BasicAppBar(title: 'async device info'),
       body: AsyncDataLoader(
-        futures: [DeviceInfoUtil.getDeviceInfo(), sleep()],
+        futures: [
+          DeviceInfoUtil.getDeviceInfo(),
+          Future.delayed(const Duration(seconds: 4))
+        ],
         builder: (data) {
           DeviceInfo deviceInfo = data[0];
           var (:deviceName, :systemVersion, :appVersion, :appName) = deviceInfo;
