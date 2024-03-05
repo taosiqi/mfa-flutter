@@ -20,12 +20,17 @@ class FormPage extends StatelessWidget {
         body: SafeScrollView(
           child: FormBuilder(
             key: _formKey,
+            initialValue: const {
+              "email": "1870894297@qq.com",
+              "password": "123456",
+            },
             child: Column(
               children: [
                 FormBuilderTextField(
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   key: _emailFieldKey,
                   name: 'email',
+                  // initialValue: '1870894297@qq.com',
                   decoration: const InputDecoration(labelText: '邮箱'),
                   // 用库的效验
                   validator: FormBuilderValidators.compose([
@@ -50,6 +55,7 @@ class FormPage extends StatelessWidget {
                   name: 'password',
                   decoration: const InputDecoration(labelText: '密码'),
                   obscureText: true,
+                  // initialValue: '123456',
                   validator: FormBuilderValidators.compose([
                     FormBuilderValidators.minLength(10),
                   ]),
