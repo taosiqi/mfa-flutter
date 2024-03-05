@@ -151,6 +151,9 @@ class _HomePageState extends State<HomePage> {
             Button('To Sync Device', onPressed: () {
               context.push('/sync_device');
             }),
+            Button('To Url Launcher', onPressed: () {
+              context.push('/url_launcher');
+            }),
             TextButton(
               onPressed: () {},
               child: Text(
