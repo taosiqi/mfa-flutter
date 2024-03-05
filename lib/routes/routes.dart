@@ -10,6 +10,7 @@ import 'package:mfa/pages/demo/list.dart';
 import 'package:mfa/pages/demo/model.dart';
 import 'package:mfa/pages/demo/other.dart';
 import 'package:mfa/pages/demo/provider.dart';
+import 'package:mfa/pages/demo/sync_device.dart';
 import 'package:mfa/pages/demo/toast.dart';
 import 'package:mfa/pages/demo/view.dart';
 import 'package:mfa/pages/demo/webview.dart';
@@ -75,6 +76,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/device',
       pageBuilder: slidePageBuilder((context) => const DevicePage()),
+    ),
+    GoRoute(
+      path: '/sync_device',
+      pageBuilder: slidePageBuilder((context) => const SyncDevicePage()),
     ),
     GoRoute(
       path: '/http',

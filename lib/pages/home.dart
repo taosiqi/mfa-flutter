@@ -148,6 +148,9 @@ class _HomePageState extends State<HomePage> {
             Button('To Http', onPressed: () {
               context.push('/http');
             }),
+            Button('To Sync Device', onPressed: () {
+              context.push('/sync_device');
+            }),
             TextButton(
               onPressed: () {},
               child: Text(
