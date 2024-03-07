@@ -154,6 +154,12 @@ class _HomePageState extends State<HomePage> {
             Button('To Url Launcher', onPressed: () {
               context.push('/url_launcher');
             }),
+            Button('To Scan', onPressed: () {
+              context.push('/scan');
+            }),
+            Button('To Camera', onPressed: () {
+              context.push('/camera');
+            }),
             TextButton(
               onPressed: () {},
               child: Text(

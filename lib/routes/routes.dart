@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mfa/pages/demo/adaptive.dart';
+import 'package:mfa/pages/demo/camera.dart';
 import 'package:mfa/pages/demo/day.dart';
 import 'package:mfa/pages/demo/device.dart';
 import 'package:mfa/pages/demo/dialog.dart';
@@ -10,6 +11,7 @@ import 'package:mfa/pages/demo/list.dart';
 import 'package:mfa/pages/demo/model.dart';
 import 'package:mfa/pages/demo/other.dart';
 import 'package:mfa/pages/demo/provider.dart';
+import 'package:mfa/pages/demo/scan.dart';
 import 'package:mfa/pages/demo/sync_device.dart';
 import 'package:mfa/pages/demo/toast.dart';
 import 'package:mfa/pages/demo/url_launcher.dart';
@@ -90,5 +92,13 @@ final GoRouter router = GoRouter(
       path: '/http',
       pageBuilder: slidePageBuilder((context) => const HttpPage()),
     ),
+    GoRoute(
+      path: '/scan',
+      pageBuilder: slidePageBuilder((context) => const ScanPage()),
+    ),
+    GoRoute(
+      path: '/camera',
+      pageBuilder: slidePageBuilder((context) => const CameraPage()),
+    )
   ],
 );

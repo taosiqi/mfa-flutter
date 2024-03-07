@@ -53,6 +53,9 @@ dependencies:
   dio: ^5.4.0
   logger: ^2.0.2+1
   url_launcher: ^6.2.5
+  mobile_scanner: ^4.0.1
+  camera: ^0.10.5+9
+  image_gallery_saver: ^2.0.3
 
 dev_dependencies:
   flutter_test:
