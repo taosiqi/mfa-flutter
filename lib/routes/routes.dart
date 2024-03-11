@@ -7,6 +7,7 @@ import 'package:mfa/pages/demo/device.dart';
 import 'package:mfa/pages/demo/dialog.dart';
 import 'package:mfa/pages/demo/form.dart';
 import 'package:mfa/pages/demo/http.dart';
+import 'package:mfa/pages/demo/icon.dart';
 import 'package:mfa/pages/demo/list.dart';
 import 'package:mfa/pages/demo/model.dart';
 import 'package:mfa/pages/demo/other.dart';
@@ -104,6 +105,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/storage',
       pageBuilder: slidePageBuilder((context) => const StoragePage()),
+    ),
+    GoRoute(
+      path: '/icon',
+      pageBuilder: slidePageBuilder((context) => const IconPage()),
     )
   ],
 );
