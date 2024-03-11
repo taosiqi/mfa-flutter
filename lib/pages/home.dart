@@ -160,6 +160,9 @@ class _HomePageState extends State<HomePage> {
             Button('To Camera', onPressed: () {
               context.push('/camera');
             }),
+            Button('To Storage', onPressed: () {
+              context.push('/storage');
+            }),
             TextButton(
               onPressed: () {},
               child: Text(

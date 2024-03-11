@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mfa/widgets/basic/app_bar.dart';
+import 'package:mfa/widgets/basic/button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class UrlLauncherPage extends StatefulWidget {
@@ -28,9 +29,10 @@ class _UrlLauncherPageState extends State<UrlLauncherPage> {
 
   Future<void> _makeEmailCall(String emailPath) async {
     final Uri launchUri = Uri(
-      scheme: 'mailto',
-      path: emailPath,
-    );
+        scheme: 'mailto',
+        path: emailPath,
+        queryParameters: {'subject': 'Example'});
+    debugPrint(launchUri.toString());
     await launchUrl(launchUri);
   }
 
@@ -41,17 +43,17 @@ class _UrlLauncherPageState extends State<UrlLauncherPage> {
       body: Center(
         child: Column(
           children: [
-            ElevatedButton(
+            Button(
+              '打电话',
               onPressed: () => {_makePhoneCall('1234567890')},
-              child: const Text('打电话'),
             ),
-            ElevatedButton(
+            Button(
+              '发信息',
               onPressed: () => {_makeSmsCall('1234567890')},
-              child: const Text('发信息'),
             ),
-            ElevatedButton(
-              onPressed: () => {_makeEmailCall('example@example.com')},
-              child: const Text('发邮件'),
+            Button(
+              '发邮件',
+              onPressed: () => {_makeEmailCall('John.Doe@example.com')},
             ),
           ],
         ),

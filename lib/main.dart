@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_builder_validators/localization/l10n.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:mfa/providers/count.dart';
 import 'package:mfa/providers/person.dart';
 import 'package:mfa/providers/user.dart';
@@ -12,7 +13,8 @@ import 'package:provider/provider.dart';
 
 import 'constants/color.dart';
 
-main() {
+main() async {
+  await GetStorage.init();
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding); // 保持屏幕海报
   runApp(const MyApp());
