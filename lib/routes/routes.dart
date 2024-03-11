@@ -8,6 +8,7 @@ import 'package:mfa/pages/demo/dialog.dart';
 import 'package:mfa/pages/demo/form.dart';
 import 'package:mfa/pages/demo/http.dart';
 import 'package:mfa/pages/demo/icon.dart';
+import 'package:mfa/pages/demo/image_picker.dart';
 import 'package:mfa/pages/demo/list.dart';
 import 'package:mfa/pages/demo/model.dart';
 import 'package:mfa/pages/demo/other.dart';
@@ -109,6 +110,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/icon',
       pageBuilder: slidePageBuilder((context) => const IconPage()),
+    ),
+    GoRoute(
+      path: '/image_picker',
+      pageBuilder: slidePageBuilder((context) => const ImagePickerPage()),
     )
   ],
 );

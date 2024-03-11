@@ -163,8 +163,11 @@ class _HomePageState extends State<HomePage> {
             Button('To Storage', onPressed: () {
               context.push('/storage');
             }),
-            Button('To Storage', onPressed: () {
+            Button('To Icon', onPressed: () {
               context.push('/icon');
+            }),
+            Button('To Image Picker', onPressed: () {
+              context.push('/image_picker');
             }),
             TextButton(
               onPressed: () {},
