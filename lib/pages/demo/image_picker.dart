@@ -12,6 +12,8 @@ class ImagePickerPage extends StatefulWidget {
 
 class _ImagePickerPageState extends State<ImagePickerPage> {
   late List<XFile> _files = [];
+  late List<XFile> _files2 = [];
+
   Future<void> getLostData() async {
     final ImagePicker picker = ImagePicker();
     final List<XFile> files = await picker.pickMultiImage();
@@ -20,6 +22,17 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
     }
     setState(() {
       _files = files;
+    });
+  }
+
+  Future<void> getLostData2() async {
+    final ImagePicker picker = ImagePicker();
+    final List<XFile> files = await picker.pickMultipleMedia();
+    if (files.isEmpty) {
+      return;
+    }
+    setState(() {
+      _files2 = files;
     });
   }
 
@@ -37,6 +50,17 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
               '选择照片',
               onPressed: () async {
                 getLostData();
+              },
+            ),
+            // 间隔
+            const SizedBox(),
+            ..._files2.map((item) {
+              return Text(item.name);
+            }),
+            Button(
+              '选择多媒体',
+              onPressed: () async {
+                getLostData2();
               },
             )
           ],
