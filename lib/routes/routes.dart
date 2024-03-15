@@ -1,30 +1,119 @@
 import 'package:flutter/material.dart';
-import 'package:mfa/pages/entry/entry.dart';
-import 'package:mfa/pages/entry/scan.dart';
-import 'package:mfa/pages/export/after.dart';
-import 'package:mfa/pages/export/code.dart';
-import 'package:mfa/pages/export/export.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mfa/pages/demo/adaptive.dart';
+import 'package:mfa/pages/demo/camera.dart';
+import 'package:mfa/pages/demo/day.dart';
+import 'package:mfa/pages/demo/device.dart';
+import 'package:mfa/pages/demo/dialog.dart';
+import 'package:mfa/pages/demo/form.dart';
+import 'package:mfa/pages/demo/http.dart';
+import 'package:mfa/pages/demo/icon.dart';
+import 'package:mfa/pages/demo/image_picker.dart';
+import 'package:mfa/pages/demo/list.dart';
+import 'package:mfa/pages/demo/model.dart';
+import 'package:mfa/pages/demo/other.dart';
+import 'package:mfa/pages/demo/provider.dart';
+import 'package:mfa/pages/demo/scan.dart';
+import 'package:mfa/pages/demo/storage.dart';
+import 'package:mfa/pages/demo/sync_device.dart';
+import 'package:mfa/pages/demo/toast.dart';
+import 'package:mfa/pages/demo/url_launcher.dart';
+import 'package:mfa/pages/demo/view.dart';
+import 'package:mfa/pages/demo/webview.dart';
 import 'package:mfa/pages/home.dart';
-import 'package:mfa/pages/import/guide.dart';
-import 'package:mfa/pages/import/import.dart';
-import 'package:mfa/pages/import/offline.dart';
 import 'package:mfa/pages/login.dart';
-import 'package:mfa/pages/poster.dart';
-import 'package:mfa/pages/setting/privacy.dart';
-import 'package:mfa/pages/setting/setting.dart';
+import 'package:mfa/routes/slide_page_builder.dart';
 
-final Map<String, WidgetBuilder> routes = {
-  "/": (context) => const HomePage(), //注册首页路由
-  "login": (context) => const LoginPage(),
-  "entry": (context) => const EntryPage(),
-  "scan": (context) => const ScanPage(),
-  "export": (context) => const ExportPage(),
-  "code": (context) => const CodePage(),
-  "after": (context) => const AfterPage(),
-  "import": (context) => const ImportPage(),
-  "guide": (context) => const GuidePage(),
-  "offline": (context) => const OfflinePage(),
-  "setting": (context) => const SettingPage(),
-  "privacy": (context) => const PrivacyPage(),
-  "poster": (context) => const PosterPage(),
-};
+final GoRouter router = GoRouter(
+  routes: <RouteBase>[
+    GoRoute(
+      path: '/',
+      pageBuilder: slidePageBuilder((context) => const HomePage()),
+    ),
+    GoRoute(
+      path: '/provider',
+      pageBuilder: slidePageBuilder((context) => const ProvidePage()),
+    ),
+    GoRoute(
+      path: '/dialog',
+      pageBuilder: slidePageBuilder((context) => const DialogPage()),
+    ),
+    GoRoute(
+      path: '/form',
+      pageBuilder: slidePageBuilder((context) => FormPage()),
+    ),
+    GoRoute(
+      path: '/viewPage',
+      pageBuilder: slidePageBuilder((context) => const ViewPage()),
+    ),
+    GoRoute(
+      path: '/other',
+      pageBuilder: slidePageBuilder((context) => const OtherPage()),
+    ),
+    GoRoute(
+      path: '/webview',
+      pageBuilder: slidePageBuilder((context) => const WebviewPage()),
+    ),
+    GoRoute(
+      path: '/model',
+      pageBuilder: slidePageBuilder((context) => const ModelPage()),
+    ),
+    GoRoute(
+      path: '/day',
+      pageBuilder: slidePageBuilder((context) => const DayPage()),
+    ),
+    GoRoute(
+      path: '/list',
+      pageBuilder: slidePageBuilder(
+          (context) => const ListPage(key: ValueKey('ListPage'))),
+    ),
+    GoRoute(
+      path: '/login',
+      pageBuilder: slidePageBuilder((context) => const LoginPage()),
+    ),
+    GoRoute(
+      pageBuilder: slidePageBuilder((context) => const AdaptivePage()),
+      path: '/adaptive',
+    ),
+    GoRoute(
+      path: '/toast',
+      pageBuilder: slidePageBuilder((context) => const ToastPage()),
+    ),
+    GoRoute(
+      path: '/device',
+      pageBuilder: slidePageBuilder((context) => const DevicePage()),
+    ),
+    GoRoute(
+      path: '/sync_device',
+      pageBuilder: slidePageBuilder((context) => const SyncDevicePage()),
+    ),
+    GoRoute(
+      path: '/url_launcher',
+      pageBuilder: slidePageBuilder((context) => const UrlLauncherPage()),
+    ),
+    GoRoute(
+      path: '/http',
+      pageBuilder: slidePageBuilder((context) => const HttpPage()),
+    ),
+    GoRoute(
+      path: '/scan',
+      pageBuilder: slidePageBuilder((context) => const ScanPage()),
+    ),
+    GoRoute(
+      path: '/camera',
+      pageBuilder: slidePageBuilder((context) => const CameraPage()),
+    ),
+    GoRoute(
+      path: '/storage',
+      pageBuilder: slidePageBuilder((context) => const StoragePage()),
+    ),
+    GoRoute(
+      path: '/icon',
+      pageBuilder: slidePageBuilder((context) => const IconPage()),
+    ),
+    GoRoute(
+      path: '/image_picker',
+      pageBuilder: slidePageBuilder((context) => const ImagePickerPage()),
+    )
+  ],
+);

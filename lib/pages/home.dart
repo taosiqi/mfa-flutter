@@ -1,5 +1,10 @@
+import 'package:dart_totp/dart_totp.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:go_router/go_router.dart';
+import 'package:mfa/utils/platform.dart';
+import 'package:mfa/widgets/basic/button.dart';
+import 'package:mfa/widgets/basic/icon.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,10 +14,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(milliseconds: 3000), () {
+      debugPrint('init over');
+      FlutterNativeSplash.remove(); //关闭开屏海报
     });
   }
 
@@ -22,7 +29,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle.dark,
+        systemOverlayStyle: getSystemUiOverlayStyle(context),
         leading: Builder(
           builder: (context) => IconButton(
             onPressed: () {
@@ -35,11 +42,12 @@ class _HomePageState extends State<HomePage> {
           'MFA二次验证码',
           style: TextStyle(fontSize: 22),
         ),
+        titleSpacing: 0,
         centerTitle: false,
       ),
       drawer: Drawer(
           width: 250,
-          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.zero,
           ),
@@ -52,35 +60,122 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           )),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        padding: const EdgeInsets.all(20),
+        child: Wrap(
+          spacing: 10,
+          runSpacing: 10,
+          // alignment: WrapAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, "entry");
-                },
-                style: ElevatedButton.styleFrom(
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(18)),
-                  ),
-                ),
-                child: const Text('Login')),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('$_counter',
-                  textScaleFactor: 2.0,
-                  style: const TextStyle(
-                    fontSize: 50,
-                  )),
+            Button(
+              'To Login',
+              onPressed: () {
+                context.push('/login');
+              },
+            ),
+            Button(
+              'To Provider',
+              onPressed: () {
+                context.push('/provider');
+              },
+            ),
+            Button(
+              'To List',
+              onPressed: () {
+                context.push('/list');
+              },
+            ),
+            Button(
+              'To Dialog',
+              onPressed: () {
+                context.push('/dialog');
+              },
+            ),
+            Button(
+              'To Form',
+              onPressed: () {
+                context.push('/form');
+              },
+            ),
+            Button(
+              'To Page View',
+              onPressed: () {
+                context.push('/viewPage');
+              },
+            ),
+            Button(
+              'To Day',
+              onPressed: () {
+                context.push('/day');
+              },
+            ),
+            Button(
+              'To Other',
+              onPressed: () {
+                context.push('/other');
+              },
+            ),
+            Button(
+              'To Webview',
+              onPressed: () {
+                context.push('/webview');
+              },
+            ),
+            Button(
+              'To Model',
+              onPressed: () {
+                context.push('/model');
+              },
+            ),
+            Button(
+              'To Adaptive',
+              onPressed: () {
+                context.push('/adaptive');
+              },
+            ),
+            Button(
+              'To Toast',
+              onPressed: () {
+                context.push('/toast');
+              },
+            ),
+            Button(
+              'To Device Info',
+              onPressed: () {
+                context.push('/device');
+              },
+            ),
+            Button('To Http', onPressed: () {
+              context.push('/http');
+            }),
+            Button('To Sync Device', onPressed: () {
+              context.push('/sync_device');
+            }),
+            Button('To Url Launcher', onPressed: () {
+              context.push('/url_launcher');
+            }),
+            Button('To Scan', onPressed: () {
+              context.push('/scan');
+            }),
+            Button('To Camera', onPressed: () {
+              context.push('/camera');
+            }),
+            Button('To Storage', onPressed: () {
+              context.push('/storage');
+            }),
+            Button('To Icon', onPressed: () {
+              context.push('/icon');
+            }),
+            Button('To Image Picker', onPressed: () {
+              context.push('/image_picker');
+            }),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                  'totp ${TOTP.generateTOTP('KVARB3JSYG6RNYY7HJX2N6ZTUSOXU5RK')}'),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
@@ -91,7 +186,7 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {
           Scaffold.of(context).closeDrawer();
         },
-        icon: const Icon(Icons.menu_outlined),
+        icon: const Icon(AntdIcons.calendar),
       ),
     );
   }
