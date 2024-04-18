@@ -10,6 +10,7 @@ import 'package:mfa/pages/demo/http.dart';
 import 'package:mfa/pages/demo/icon.dart';
 import 'package:mfa/pages/demo/image_picker.dart';
 import 'package:mfa/pages/demo/list.dart';
+import 'package:mfa/pages/demo/lottie.dart';
 import 'package:mfa/pages/demo/model.dart';
 import 'package:mfa/pages/demo/other.dart';
 import 'package:mfa/pages/demo/provider.dart';
@@ -114,6 +115,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/image_picker',
       pageBuilder: slidePageBuilder((context) => const ImagePickerPage()),
+    ),
+    GoRoute(
+      path: '/lottie',
+      pageBuilder: slidePageBuilder((context) => const LottiePage()),
     )
   ],
 );

@@ -169,6 +169,9 @@ class _HomePageState extends State<HomePage> {
             Button('To Image Picker', onPressed: () {
               context.push('/image_picker');
             }),
+            Button('To Lottie', onPressed: () {
+              context.push('/lottie');
+            }),
             TextButton(
               onPressed: () {},
               child: Text(
