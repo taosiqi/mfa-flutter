@@ -19,8 +19,6 @@ class _LottiePageState extends State<LottiePage> {
         child: Column(
           children: [
             Lottie.asset('assets/lottie/LottieLogo.json'),
-            // Lottie.network(
-            //     'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'),
             Lottie.asset('assets/lottie/angel.zip'),
           ],
         ),
