@@ -15,6 +15,7 @@ import 'package:mfa/pages/demo/model.dart';
 import 'package:mfa/pages/demo/other.dart';
 import 'package:mfa/pages/demo/provider.dart';
 import 'package:mfa/pages/demo/scan.dart';
+import 'package:mfa/pages/demo/share_plus.dart';
 import 'package:mfa/pages/demo/storage.dart';
 import 'package:mfa/pages/demo/sync_device.dart';
 import 'package:mfa/pages/demo/toast.dart';
@@ -119,6 +120,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/lottie',
       pageBuilder: slidePageBuilder((context) => const LottiePage()),
+    ),
+    GoRoute(
+      path: '/share_plus',
+      pageBuilder: slidePageBuilder((context) => const SharePlusPage()),
     )
   ],
 );
