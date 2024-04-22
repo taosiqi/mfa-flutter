@@ -175,6 +175,9 @@ class _HomePageState extends State<HomePage> {
             Button('To Share Plus', onPressed: () {
               context.push('/share_plus');
             }),
+            Button('To Storage Info', onPressed: () {
+              context.push('/storage_info');
+            }),
             TextButton(
               onPressed: () {},
               child: Text(

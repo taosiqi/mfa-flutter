@@ -17,6 +17,7 @@ import 'package:mfa/pages/demo/provider.dart';
 import 'package:mfa/pages/demo/scan.dart';
 import 'package:mfa/pages/demo/share_plus.dart';
 import 'package:mfa/pages/demo/storage.dart';
+import 'package:mfa/pages/demo/storage_info.dart';
 import 'package:mfa/pages/demo/sync_device.dart';
 import 'package:mfa/pages/demo/toast.dart';
 import 'package:mfa/pages/demo/url_launcher.dart';
@@ -124,6 +125,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/share_plus',
       pageBuilder: slidePageBuilder((context) => const SharePlusPage()),
+    ),
+    GoRoute(
+      path: '/storage_info',
+      pageBuilder: slidePageBuilder((context) => const StorageInfoPage()),
     )
   ],
 );

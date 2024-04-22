@@ -459,6 +459,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.9.0"
+  flutter_storage_info:
+    dependency: "direct main"
+    description:
+      name: flutter_storage_info
+      sha256: b5432670138d1630d3746a9d74eb3d108c82130b229977b6013c6fb77b898f07
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   flutter_test:
     dependency: "direct dev"
     description: flutter
