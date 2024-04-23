@@ -13,6 +13,7 @@ import 'package:mfa/pages/demo/list.dart';
 import 'package:mfa/pages/demo/lottie.dart';
 import 'package:mfa/pages/demo/model.dart';
 import 'package:mfa/pages/demo/other.dart';
+import 'package:mfa/pages/demo/permission.dart';
 import 'package:mfa/pages/demo/provider.dart';
 import 'package:mfa/pages/demo/scan.dart';
 import 'package:mfa/pages/demo/share_plus.dart';
@@ -129,6 +130,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/storage_info',
       pageBuilder: slidePageBuilder((context) => const StorageInfoPage()),
+    ),
+    GoRoute(
+      path: '/permission_page',
+      pageBuilder: slidePageBuilder((context) => const PermissionPage()),
     )
   ],
 );

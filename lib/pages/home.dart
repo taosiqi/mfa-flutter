@@ -178,6 +178,9 @@ class _HomePageState extends State<HomePage> {
             Button('To Storage Info', onPressed: () {
               context.push('/storage_info');
             }),
+            Button('To Permission Handle', onPressed: () {
+              context.push('/permission_page');
+            }),
             TextButton(
               onPressed: () {},
               child: Text(
