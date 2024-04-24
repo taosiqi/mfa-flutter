@@ -179,7 +179,10 @@ class _HomePageState extends State<HomePage> {
               context.push('/storage_info');
             }),
             Button('To Permission Handle', onPressed: () {
-              context.push('/permission_page');
+              context.push('/permission');
+            }),
+            Button('To Cached Image', onPressed: () {
+              context.push('/cached_image');
             }),
             TextButton(
               onPressed: () {},

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mfa/pages/demo/adaptive.dart';
+import 'package:mfa/pages/demo/cached_image.dart';
 import 'package:mfa/pages/demo/camera.dart';
 import 'package:mfa/pages/demo/day.dart';
 import 'package:mfa/pages/demo/device.dart';
@@ -132,8 +133,12 @@ final GoRouter router = GoRouter(
       pageBuilder: slidePageBuilder((context) => const StorageInfoPage()),
     ),
     GoRoute(
-      path: '/permission_page',
+      path: '/permission',
       pageBuilder: slidePageBuilder((context) => const PermissionPage()),
+    ),
+    GoRoute(
+      path: '/cached_image',
+      pageBuilder: slidePageBuilder((context) => const CachedImagePage()),
     )
   ],
 );
