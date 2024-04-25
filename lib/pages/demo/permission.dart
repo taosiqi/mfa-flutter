@@ -25,6 +25,10 @@ class _PermissionPageState extends State<PermissionPage> {
             Button(
               '请求定位权限',
               onPressed: () => {getLocationPermission()},
+            ),
+            Button(
+              '请求永久定位权限',
+              onPressed: () => {getLocationAlwaysPermission()},
             )
           ],
         ),
@@ -33,7 +37,7 @@ class _PermissionPageState extends State<PermissionPage> {
   }
 
   getCameraPermission() async {
-    PermissionStatus status = await Permission.camera.status;
+    PermissionStatus status = await Permission.camera.request();
     debugPrint('权限：${status.isGranted}');
     if (status.isDenied) {
       openAppSettings();
@@ -41,8 +45,17 @@ class _PermissionPageState extends State<PermissionPage> {
   }
 
   getLocationPermission() async {
-    PermissionStatus status = await Permission.locationAlways.status;
-    debugPrint('权限：${status.isDenied}');
+    PermissionStatus status = await Permission.location.request();
+    debugPrint('权限：${status.isGranted}');
+    // 没有权限打开设置
+    if (status.isDenied) {
+      openAppSettings();
+    }
+  }
+
+  getLocationAlwaysPermission() async {
+    PermissionStatus status = await Permission.locationAlways.request();
+    debugPrint('权限：${status.isGranted}');
     // 没有权限打开设置
     if (status.isDenied) {
       openAppSettings();
