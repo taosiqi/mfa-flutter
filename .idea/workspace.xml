@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca36d986-9888-444b-b856-30fa6779e076" name="更改" comment="feat: 添加图片缓存组件">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ca36d986-9888-444b-b856-30fa6779e076" name="更改" comment="build: idea 配置">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -79,6 +79,10 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Flutter.run" />
+      <item itemvalue="Gradle./Users/taosiqi/Desktop/project/mfa-flutter" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle./Users/taosiqi/Desktop/project/mfa-flutter" />
@@ -107,6 +111,7 @@
       <workItem from="1724805033793" duration="18000" />
       <workItem from="1724805053280" duration="8000" />
       <workItem from="1724805068524" duration="46000" />
+      <workItem from="1724979308770" duration="715000" />
     </task>
     <servers />
   </component>
