@@ -864,7 +864,7 @@
         <entry key="mobile_scanner">
           <value>
             <list>
-              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/mobile_scanner-5.2.1/lib" />
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/mobile_scanner-4.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -1732,7 +1732,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/meta-1.15.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mime-1.0.5/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mime-1.0.6/lib" />
-      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mobile_scanner-5.2.1/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mobile_scanner-4.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/multicast_dns-0.3.2+7/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/mustache_template-2.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/native_assets_builder-0.7.0/lib" />
