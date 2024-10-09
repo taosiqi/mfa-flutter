@@ -7,6 +7,7 @@ import 'package:mfa/pages/demo/day.dart';
 import 'package:mfa/pages/demo/device.dart';
 import 'package:mfa/pages/demo/dialog.dart';
 import 'package:mfa/pages/demo/form.dart';
+import 'package:mfa/pages/demo/gap.dart';
 import 'package:mfa/pages/demo/http.dart';
 import 'package:mfa/pages/demo/icon.dart';
 import 'package:mfa/pages/demo/image_picker.dart';
@@ -22,6 +23,7 @@ import 'package:mfa/pages/demo/storage.dart';
 import 'package:mfa/pages/demo/storage_info.dart';
 import 'package:mfa/pages/demo/sync_device.dart';
 import 'package:mfa/pages/demo/toast.dart';
+import 'package:mfa/pages/demo/totp.dart';
 import 'package:mfa/pages/demo/url_launcher.dart';
 import 'package:mfa/pages/demo/view.dart';
 import 'package:mfa/pages/demo/webview.dart';
@@ -139,6 +141,14 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/cached_image',
       pageBuilder: slidePageBuilder((context) => const CachedImagePage()),
+    ),
+    GoRoute(
+      path: '/totp',
+      pageBuilder: slidePageBuilder((context) => const TotpPage()),
+    ),
+    GoRoute(
+      path: '/gap',
+      pageBuilder: slidePageBuilder((context) => const GapPage()),
     )
   ],
 );
