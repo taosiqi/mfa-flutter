@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:mfa/pages/demo/adaptive.dart';
 import 'package:mfa/pages/demo/cached_image.dart';
 import 'package:mfa/pages/demo/camera.dart';
+import 'package:mfa/pages/demo/chart.dart';
 import 'package:mfa/pages/demo/day.dart';
 import 'package:mfa/pages/demo/device.dart';
 import 'package:mfa/pages/demo/dialog.dart';
@@ -149,6 +150,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: '/gap',
       pageBuilder: slidePageBuilder((context) => const GapPage()),
+    ),
+    GoRoute(
+      path: '/chart',
+      pageBuilder: slidePageBuilder((context) => const ChartPage()),
     )
   ],
 );

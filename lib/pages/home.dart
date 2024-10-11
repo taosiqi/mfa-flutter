@@ -189,6 +189,9 @@ class _HomePageState extends State<HomePage> {
             Button('To Flex Gap', onPressed: () {
               context.push('/gap');
             }),
+            Button('To Chart', onPressed: () {
+              context.push('/chart');
+            }),
           ],
         ),
       ),

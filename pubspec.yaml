@@ -64,6 +64,7 @@ dependencies:
   flutter_storage_info: ^0.0.5
   permission_handler: ^11.3.1
   cached_network_image: ^3.3.1
+  fl_chart: ^0.69.0
 
 dev_dependencies:
   flutter_test:
